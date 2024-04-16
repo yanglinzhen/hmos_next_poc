@@ -1,0 +1,8 @@
+{
+  "src": [
+    "pages/MainPage",
+    "pages/AgreementPage",
+    "pages/PrivacyPage",
+    "pages/DetailPage"
+  ]
+}
