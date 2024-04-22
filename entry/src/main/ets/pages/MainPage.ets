@@ -19,7 +19,6 @@ struct MainPage {
   build() {
     Column() {
       this.Title()
-
       Scroll() {
         GridRow({
           columns: {
@@ -43,17 +42,10 @@ struct MainPage {
             }
           }) {
             Column() {
-              Row() {
-                LogoAndVersionComponent()
-              }
-              .justifyContent(FlexAlign.End)
-              // .alignItems(VerticalAlign.Top)
-              .layoutWeight(this.currentBreakPoint === CommonConstants.BREAK_POINT_LG ?
-                CommonConstants.ROW_LG_WEIGHT : CommonConstants.ROW_WEIGHT)
-
+              LogoAndVersionComponent()
               Flex({
                 direction: FlexDirection.Column,
-                justifyContent: FlexAlign.SpaceBetween
+                justifyContent: FlexAlign.Center
               }) {
                 AppInfoComponent({
                   appInfoData: AboutViewModel.getAppInfo()
@@ -61,7 +53,7 @@ struct MainPage {
                 TechSupportComponent()
               }
               .layoutWeight(this.currentBreakPoint === CommonConstants.BREAK_POINT_LG ?
-                CommonConstants.FLEX_LG_WEIGHT : CommonConstants.FLEX_WEIGHT)
+              CommonConstants.FLEX_LG_WEIGHT : CommonConstants.FLEX_WEIGHT)
             }
           }
         }
@@ -81,7 +73,8 @@ struct MainPage {
     .backgroundColor($r('app.color.page_background'))
   }
 
-  @Builder Title() {
+  @Builder
+  Title() {
     Row() {
       Image($r('app.media.ic_back'))
         .width($r('app.float.image_size'))

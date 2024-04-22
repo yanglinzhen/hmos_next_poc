@@ -76,7 +76,7 @@ struct AppInfoItem {
       default:
         break;
     }
-    router.pushUrl({
+    router.replaceUrl({
       url: CommonConstants.DETAIL_PAGE,
       params: {
         title: itemData.title,
