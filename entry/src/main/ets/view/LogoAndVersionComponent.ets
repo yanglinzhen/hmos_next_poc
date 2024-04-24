@@ -1,4 +1,4 @@
-import { CommonConstants } from '../constants/CommonConstants';
+import { CommonConstants } from '../common/constants/CommonConstants';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import http from '@ohos.net.http';
 import BannerView from './BannerComponent';
@@ -7,6 +7,7 @@ import BannerView from './BannerComponent';
 /**
  * Logo and version component on top page.
  */
+@Preview
 @Component
 export struct LogoAndVersionComponent {
 

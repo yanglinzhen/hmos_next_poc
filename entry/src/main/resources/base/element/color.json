@@ -27,6 +27,10 @@
     {
       "name": "divider",
       "value": "#0D182431"
+    },
+    {
+      "name": "background_half_gray",
+      "value": "#33333333"
     }
   ]
 }

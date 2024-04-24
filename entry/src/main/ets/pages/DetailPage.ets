@@ -1,6 +1,6 @@
 import { router } from '@kit.ArkUI';
 import { DetailListComponent } from '../view/DetailListComponent';
-import { CommonConstants } from '../constants/CommonConstants';
+import { CommonConstants } from '../common/constants/CommonConstants';
 import { DataItem } from '../viewmodel/DataItem';
 import AboutViewModel from '../viewmodel/AboutViewModel';
 

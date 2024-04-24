@@ -1,4 +1,4 @@
-import { CommonConstants } from '../constants/CommonConstants';
+import { CommonConstants } from '../common/constants/CommonConstants';
 import { DataItem } from '../viewmodel/DataItem';
 
 /**

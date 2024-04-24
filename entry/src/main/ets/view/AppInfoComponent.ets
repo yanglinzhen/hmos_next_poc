@@ -1,6 +1,6 @@
 import { router } from '@kit.ArkUI';
 import { DataItem } from '../viewmodel/DataItem';
-import { CommonConstants } from '../constants/CommonConstants';
+import { CommonConstants } from '../common/constants/CommonConstants';
 import AboutViewModel from '../viewmodel/AboutViewModel';
 
 /**

@@ -2,7 +2,7 @@ import { router } from '@kit.ArkUI';
 import { TechSupportComponent } from '../view/TechSupportComponent';
 import { AppInfoComponent } from '../view/AppInfoComponent';
 import { LogoAndVersionComponent } from '../view/LogoAndVersionComponent';
-import { CommonConstants } from '../constants/CommonConstants';
+import { CommonConstants } from '../common/constants/CommonConstants';
 import AboutViewModel from '../viewmodel/AboutViewModel';
 
 /**

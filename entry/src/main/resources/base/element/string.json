@@ -1,6 +1,10 @@
 {
   "string": [
     {
+      "name": "http_response_error",
+      "value": "Request error, please check if there is a network."
+    },
+    {
       "name": "harmony_poc_desc",
       "value": "This is POC for Huawei HarmonyOS."
     },

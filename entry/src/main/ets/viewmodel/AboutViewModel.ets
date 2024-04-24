@@ -1,5 +1,5 @@
 import { DataItem } from './DataItem';
-import { CommonConstants } from '../constants/CommonConstants';
+import { CommonConstants } from '../common/constants/CommonConstants';
 
 /**
  * About ability view model.

@@ -1,6 +1,6 @@
 import { router } from '@kit.ArkUI';
 import { webview } from '@kit.ArkWeb';
-import { CommonConstants } from '../constants/CommonConstants';
+import { CommonConstants } from '../common/constants/CommonConstants';
 
 /**
  * User agreement page.

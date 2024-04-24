@@ -1,5 +1,5 @@
 import { router } from '@kit.ArkUI';
-import { CommonConstants } from '../constants/CommonConstants';
+import { CommonConstants } from '../common/constants/CommonConstants';
 
 /**
  * Privacy agreement and copyright statement page.
