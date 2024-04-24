@@ -1,6 +1,10 @@
 {
   "string": [
     {
+      "name": "harmony_poc_desc",
+      "value": "This is POC for Huawei HarmonyOS."
+    },
+    {
       "name": "module_desc",
       "value": "This module template implements About functions."
     },

@@ -3,6 +3,7 @@
     "pages/MainPage",
     "pages/AgreementPage",
     "pages/PrivacyPage",
-    "pages/DetailPage"
+    "pages/DetailPage",
+    "pages/EulaPage"
   ]
 }

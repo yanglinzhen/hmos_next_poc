@@ -14,7 +14,7 @@
       {
         "name": "EntryAbility",
         "srcEntry": "./ets/entryability/EntryAbility.ets",
-        "description": "$string:ability_desc",
+        "description": "$string:harmony_poc_desc",
         "icon": "$media:layered_image",
         "label": "$string:ability_label",
         "startWindowIcon": "$media:startIcon",
