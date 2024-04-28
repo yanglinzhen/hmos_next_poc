@@ -1,0 +1,9 @@
+{
+  "module": {
+    "name": "networks",
+    "type": "har",
+    "deviceTypes": [
+      "default"
+    ]
+  }
+}

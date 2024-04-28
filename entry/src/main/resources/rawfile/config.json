@@ -1,0 +1,3150 @@
+{
+  "sslPinning": [
+    {
+      "whiteList": [
+        "itunes.apple.com",
+        "play.google.com",
+        "mobile.baidu.com",
+        "www.miitbeian.gov.cn",
+        "www.bankofengland.co.uk",
+        "www.business.hsbc.fr",
+        "fra1.qualtrics.com",
+        "*.qualtrics.com"
+      ]
+    }
+  ],
+  "version": "HSBCnet.1.5.14",
+  "refreshPeriod": 10,
+  "prelogonPageStay": 0,
+  "webViewTimer": 1,
+  "webversions": [
+    {
+      "version": "HSBCnet.1.5.14"
+    }
+  ],
+  "psd2Config": [
+    {
+      "enable": true,
+      "supportFeatures": [
+        "openid",
+        "accounts",
+        "payments",
+        "fundsconfirmations"
+      ],
+      "host": "https://customer-ingress-net01.uat.eu-west-1.ob.cloud1.vv1865.com/",
+      "host_EU": "https://customer-ingress-neteu01.uat.eu-west-1.ob.cloud1.vv1865.com/",
+      "supportFraudfeed": true,
+      "psd2SupportedAccount": "CA,CC",
+      "ccSupportedBosType": [
+        "WCA"
+      ],
+      "unsupportedConsentSubTypes": [
+        {
+          "consentType": "",
+          "consentSubType": []
+        }
+      ],
+      "singleSCA": true
+    }
+  ],
+  "screenCapture": [
+    {
+      "android": 0
+    }
+  ],
+  "specialFingerprintOS": [
+    "7.1.1",
+    "8.0",
+    "8.0.0"
+  ],
+  "minOSVersionSupport": {
+    "iOSVer": "13",
+    "iOSMsg": "Please note: the latest version of the app requires iOS 13 or later.",
+    "AndroidVer": "26",
+    "AndroidMsg": "Please note: the latest version of the app requires Android 8 or later.",
+    "showEveryRelease_android": "true",
+    "showEveryRelease_ios": "true"
+  },
+  "specialAnnouncement": [
+    {
+      "specialAnnouncement": 0,
+      "specialAnnouncementVersion": "1.0",
+      "specialAnnouncementTitle": [
+        {
+          "en": "Keeping Your Device Secure",
+          "zh_CN": "保持您的设备安全",
+          "zh_TW": "保持您的裝置安全"
+        }
+      ],
+      "specialAnnouncementMessage": [
+        {
+          "en": "HSBC recommends that you only install apps from official app stores. If you see pop ups, messages or emails containing links asking you to download an app, you should decline – it may be an attempt to install harmful software on your device.",
+          "zh_CN": "HSBC recommends that you only install apps from official app stores. If you see pop ups, messages or emails containing links asking you to download an app, you should decline – it may be an attempt to install harmful software on your device.",
+          "zh_TW": "HSBC recommends that you only install apps from official app stores. If you see pop ups, messages or emails containing links asking you to download an app, you should decline – it may be an attempt to install harmful software on your device."
+        }
+      ],
+      "specialAnnouncementCheckbox": [
+        {
+          "en": "Don't show this message again",
+          "zh_CN": "不要再显示此消息",
+          "zh_TW": "不要再顯示此消息"
+        }
+      ],
+      "specialAnnouncementCloseButton": [
+        {
+          "en": "Close",
+          "zh_CN": "关闭",
+          "zh_TW": "關閉"
+        }
+      ]
+    }
+  ],
+  "Transmit": [
+    {
+      "push_notification_url": "file:///B2N/HSBCnet/MSP_web/HSBCnet/PushNotification/PushNotification.html",
+      "server_address": "https://transmit-sit.sde3-c.uk.hsbcnet.com",
+      "app_id": "sde3_hsbcnet_mobile",
+      "token_name": "hsbcnet_mobile",
+      "token": "656fed54-10e5-439e-8793-5b92a2546cca",
+      "enableEncryption": true,
+      "reasonCodes": [
+        {
+          "code": "SWORD_ERROR_001",
+          "nls": "NLS.PAYMENT.PH2_ERROR_MSG01"
+        },
+        {
+          "code": "SWORD_ERROR_002",
+          "nls": "NLS.PAYMENT.PH2_ERROR_MSG01"
+        }
+      ]
+    }
+  ],
+  "securityConfig": {
+    "enableKeyboard": false,
+    "enableLengthLimit": false,
+    "enableMoreFirstName": false
+  },
+  "informationErrorPath": [
+    {
+      "url": "file:///B2N/HSBCnet/MSP_web/config/template/HSBCnet/noNetworkErrorpage.html"
+    }
+  ],
+  "fingerprintIdDeviceModel": [
+    "H870DSU",
+    "LG-F800K",
+    "LG-F800L",
+    "LG-F800S",
+    "LG-H870",
+    "LG-H870DS",
+    "LG-H873",
+    "LG-H990",
+    "LG-H990N",
+    "LGM-G600K",
+    "LGM-G600KR",
+    "LGM-G600L",
+    "LGM-G600S",
+    "LGM-G600SP",
+    "LGUS997",
+    "SM-9008",
+    "SM-900Y",
+    "SM-C9000",
+    "SM-C900F",
+    "SAMSUNG-SM-G920AZ",
+    "SM-G906L",
+    "SM-G9200",
+    "SM-G9208",
+    "SM-G9209",
+    "SM-G920A",
+    "SM-G920F",
+    "SM-G920FD",
+    "SM-G920I",
+    "SM-G920K",
+    "SM-G920L",
+    "SM-G920P",
+    "SM-G920R4",
+    "SM-G920S",
+    "SM-G920T",
+    "SM-G920T1",
+    "SM-G920V",
+    "SM-G920W8",
+    "SAMSUNG-SM-G925A",
+    "SM-G9250",
+    "SM-G9250",
+    "SM-G925A",
+    "SM-G925F",
+    "SM-G925I",
+    "SM-G925K",
+    "SM-G925L",
+    "SM-G925P",
+    "SM-G925R4",
+    "SM-G925S",
+    "SM-G925T",
+    "SM-G925V",
+    "SM-G925W8",
+    "SAMSUNG-SM-G928A",
+    "SM-G9280",
+    "SM-G9287",
+    "SM-G928A",
+    "SM-G928C",
+    "SM-G928F",
+    "SM-G928G",
+    "SM-G928K",
+    "SM-G928L",
+    "SM-G928N0",
+    "SM-G928P",
+    "SM-G928R4",
+    "SM-G928S",
+    "SM-G928T",
+    "SM-G928V",
+    "SAMSUNG-SM-G930A",
+    "SAMSUNG-SM-G935A",
+    "SC-02H",
+    "SCV33",
+    "SM-G9300",
+    "SM-G9308",
+    "SM-G930A",
+    "SM-G930AZ",
+    "SM-G930F",
+    "SM-G930FD",
+    "SM-G930K",
+    "SM-G930L",
+    "SM-G930P",
+    "SM-G930R4",
+    "SM-G930S",
+    "SM-G930T",
+    "SM-G930U",
+    "SM-G930V",
+    "SM-G930W8",
+    "SM-G9350",
+    "SM-G935A",
+    "SM-G935F",
+    "SM-G935FD",
+    "SM-G935K",
+    "SM-G935L",
+    "SM-G935P",
+    "SM-G935R4",
+    "SM-G935S",
+    "SM-G935T",
+    "SM-G935U",
+    "SM-G935V",
+    "SM-G935W8",
+    "SM-G9500",
+    "SM-G9508",
+    "SM-G9509",
+    "SM-G950A",
+    "SM-G950F",
+    "SM-G950FD",
+    "SM-G950K",
+    "SM-G950L",
+    "SM-G950N",
+    "SM-G950P",
+    "SM-G950R4",
+    "SM-G950S",
+    "SM-G950T",
+    "SM-G950U",
+    "SM-G950U1",
+    "SM-G950V",
+    "SM-G950W",
+    "SM-G950W8",
+    "SM-G9550",
+    "SM-G9558",
+    "SM-G9559",
+    "SM-G955A",
+    "SM-G955F",
+    "SM-G955FD",
+    "SM-G955K",
+    "SM-G955L",
+    "SM-G955N",
+    "SM-G955P",
+    "SM-G955R4",
+    "SM-G955S",
+    "SM-G955T",
+    "SM-G955U",
+    "SM-G955U1",
+    "SM-G955V",
+    "SM-G955W",
+    "SM-G955W8",
+    "SM-G9600",
+    "SM-G960F",
+    "SM-G960N",
+    "SM-G960U",
+    "SM-G960W",
+    "SM-G9650",
+    "SM-G965F",
+    "SM-G965N",
+    "SM-G965U",
+    "SM-G965U1",
+    "SM-G965W",
+    "SAMSUNG-SM-N920A",
+    "SM-N9200",
+    "SM-N9208",
+    "SM-N9209",
+    "SM-N920A",
+    "SM-N920C",
+    "SM-N920F",
+    "SM-N920G",
+    "SM-N920I",
+    "SM-N920K",
+    "SM-N920L",
+    "SM-N920P",
+    "SM-N920R4",
+    "SM-N920S",
+    "SM-N920T",
+    "SM-N920V",
+    "SM-N920W8",
+    "SM-N9500",
+    "SM-N950F",
+    "SM-N950N",
+    "SM-N950U",
+    "SM-N950U1",
+    "SM-N950W",
+    "G-2PW4100",
+    "G-2PW4200",
+    "Pixel",
+    "Pixel 2",
+    "Pixel 2 XL",
+    "H8216",
+    "H8296",
+    "SM-J600F",
+    "SM-J600F/DS",
+    "SM-J600G/DS",
+    "SM-J600GT/DS",
+    "H8166",
+    "HTC U12 PLUS",
+    "SM-A6050",
+    "SM-G8850",
+    "SM-G885F",
+    "SM-A605F",
+    "SM-A605FN",
+    "SM-A605G",
+    "SM-J600G",
+    "SM-G9287C",
+    "SM-G930T1",
+    "SM-N960F",
+    "SM-N9600",
+    "SM-N960N",
+    "SM-N960U",
+    "SM-N960W",
+    "SM-N960U1",
+    "SM-A605GN",
+    "LG-H933",
+    "SM-A600G",
+    "LGM-V300S",
+    "LM-Q710YBW",
+    "LM-Q710ZAW",
+    "H8416",
+    "H9436",
+    "H9493",
+    "SM-G928I",
+    "Pixel 3",
+    "Pixel 3 XL",
+    "SM-A920F",
+    "SM-A9200",
+    "SM-A920N",
+    "H3413",
+    "H4413",
+    "H4493",
+    "SM-A750FN",
+    "SM-A750GN",
+    "SM-A750F",
+    "SM-A750N",
+    "LYA-L09",
+    "LYA-L29",
+    "LYA-AL00",
+    "LYA-AL10",
+    "LYA-TL00",
+    "LYA-L0C",
+    "XT1926-5",
+    "XT1926-6",
+    "XT1926-7",
+    "XT1926-8",
+    "SM-A750G",
+    "SM-G928W8",
+    "Pixel 3a XL",
+    "G2PW2100",
+    "LGM-V300K",
+    "LYA-AL00P",
+    "Pixel 3a",
+    "SM-A9000",
+    "SM-G970",
+    "SM-G9700",
+    "SM-G9708",
+    "SM-G970DS",
+    "SM-G970F",
+    "SM-G970F/DS",
+    "SM-G970N",
+    "SM-G970U",
+    "SM-G970U1",
+    "SM-G970W",
+    "SM-G970X",
+    "SM-G973",
+    "SM-G973F/DS",
+    "SM-G973U",
+    "SM-G973W",
+    "SM-G9730",
+    "SM-G9738",
+    "SM-G973F",
+    "SM-G973N",
+    "SM-G973DS",
+    "SM-G973U1",
+    "SM-G973X",
+    "SC-03L",
+    "SCV41",
+    "SM-G975",
+    "SM-G975X",
+    "SC-04L",
+    "SC-05L",
+    "SCV42",
+    "SM-G977W",
+    "SM-G9770",
+    "SM-G9778",
+    "SM-G977F",
+    "SM-G977N",
+    "SM-G977DS",
+    "SM-G977F/DS",
+    "SM-G977U",
+    "SM-G977B",
+    "SM-N9700",
+    "SM-N970F",
+    "SM-N970U",
+    "SM-N975",
+    "SM-N9758",
+    "SM-N975F",
+    "SM-N975F/DS",
+    "SM-N975U",
+    "SM-N975U1",
+    "SM-N975W",
+    "SM-N9750",
+    "SM-N9750/DS",
+    "SM-N975N",
+    "SM-N975XU",
+    "SM-N971U",
+    "SM-N971N",
+    "SM-N976F",
+    "SM-N976U",
+    "SM-N976N",
+    "SM-N976B",
+    "SM-N976V",
+    "LM-G710",
+    "LM-G710AWM",
+    "LM-G710EAW",
+    "LM-G710EM",
+    "LM-G710EMW",
+    "LM-G710N",
+    "LM-G710PM",
+    "LM-G710TM",
+    "LM-G710ULM",
+    "LM-G710VM",
+    "LM-G710VMX",
+    "LM-V405",
+    "LM-V409N",
+    "V405",
+    "V405QA7",
+    "V405TAB",
+    "V405UA",
+    "V405UA0",
+    "SM-A205F",
+    "SM-A205F/DS",
+    "SM-A205FN",
+    "SM-A205FN/DS",
+    "SM-A205G",
+    "SM-A205G/DS",
+    "SM-A205GN",
+    "SM-A205GN/DS",
+    "SM-A205S",
+    "SM-A205U",
+    "SM-A205W",
+    "SM-A205YN",
+    "SM-A3050",
+    "SM-A3058",
+    "SM-A305F/DS",
+    "SM-A305FN/DS",
+    "SM-A305G/DS",
+    "SM-A305GT/DS",
+    "SM-A305GN/DS",
+    "SM-A305YN",
+    "SM-A6060",
+    "SM-A606F",
+    "SM-A606F/DS",
+    "SM-A606Y",
+    "SM-A606Y/DS",
+    "SM-A7050",
+    "SM-A705F",
+    "SM-A705F/DS",
+    "SM-A705FN",
+    "SM-A705FN/DS",
+    "SM-A705GM",
+    "SM-A705GM/DS",
+    "SM-A705MN",
+    "SM-A705MN/DS",
+    "SM-A705W",
+    "SM-A705X",
+    "SM-A705YN",
+    "SM-A8050",
+    "SM-A805F",
+    "SM-A805F/DS",
+    "SM-G980",
+    "SM-G980F",
+    "SM-G980F/DS",
+    "SM-G985",
+    "SM-G985F",
+    "SM-G985F/DS",
+    "SM-G986",
+    "SM-G9860",
+    "SM-G986B/DS",
+    "SM-G986F",
+    "SM-G986F/DS",
+    "SM-G986N",
+    "SM-G986U",
+    "SM-G986U1",
+    "SM-G981",
+    "SM-G981B/DS",
+    "SM-G981F",
+    "SM-G981F/DS",
+    "SM-G981N",
+    "SM-G981U",
+    "SM-G981U1",
+    "SM-G988B/DS",
+    "SM-G988",
+    "SM-G9880",
+    "SM-G9888",
+    "SM-G988B",
+    "SM-G988B/DS",
+    "SM-G988F",
+    "SM-G988N",
+    "SM-G988U",
+    "SM-G988U1",
+    "SM-G988W",
+    "SM-F700",
+    "SM-F7000",
+    "SM-F700F",
+    "SM-F700F/DS",
+    "SM-F700N",
+    "SM-F700U/DS",
+    "SM-F700U1/DS",
+    "J8110",
+    "J8170",
+    "J9110",
+    "I3113",
+    "I3123",
+    "I4113",
+    "I4193",
+    "I3213",
+    "I3223",
+    "I4213",
+    "I4293",
+    "I3312",
+    "I3322",
+    "I4312",
+    "I4332",
+    "H4213",
+    "H4233",
+    "G8341",
+    "G8342",
+    "F8341",
+    "F8342",
+    "G8343",
+    "SOV36",
+    "SO-01K",
+    "SM-N9700/DS",
+    "SM-N970F/DS",
+    "SM-N970N",
+    "SM-N970U1",
+    "SM-N970W",
+    "SM-N975X",
+    "SM-N975C",
+    "SM-N971F",
+    "SM-N971W",
+    "SM-N976",
+    "SM-N976Q",
+    "SM-N9760",
+    "SM-N980F",
+    "SM-N980F/DS",
+    "SM-N981B",
+    "SM-N981B/DS",
+    "SM-N981U",
+    "SM-N981U1",
+    "SM-N981W",
+    "SM-N985F",
+    "SM-N985F/DS",
+    "SM-N986B",
+    "SM-N986B/D",
+    "SM-N986U",
+    "SM-N986U1",
+    "SM-N986W",
+    "SM-N9860",
+    "SM-N9810",
+    "SM-G780F",
+    "SM-G781B",
+    "SM-G990F",
+    "SM-G990F/DS",
+    "SM-G991B",
+    "SM-G991B/DS",
+    "SM-G991U",
+    "SM-G991U1",
+    "SM-G991W",
+    "SM-G991N",
+    "SM-G9910",
+    "SM-G996B",
+    "SM-G996B/DS",
+    "SM-G996U",
+    "SM-G996U1",
+    "SM-G996W",
+    "SM-G996N",
+    "SM-G9960",
+    "SM-G998B",
+    "SM-G998B/DS",
+    "SM-G998U",
+    "SM-G998U1",
+    "SM-G998W",
+    "SM-G998N",
+    "SM-G9980",
+    "SM-F700",
+    "SM-F7000",
+    "SM-F700F",
+    "SM-F700F/DS",
+    "SM-F700N",
+    "SM-F700U/DS",
+    "SM-F700U1/DS",
+    "SM-F707B",
+    "SM-F707N",
+    "SM-F7070",
+    "SM-F707U",
+    "SM-F707U1",
+    "SM-F707W",
+    "SM-F916B",
+    "SM-F916U",
+    "SM-F916U1",
+    "G020M",
+    "G020I",
+    "GA01188-US",
+    "GA01187-US",
+    "GA01189-US",
+    "GA01191-US",
+    "GA01189-US",
+    "G020P",
+    "G020",
+    "GA01181-US",
+    "GA01182-US",
+    "GA01180-US",
+    "G025J",
+    "G025I",
+    "GD1YQ",
+    "GTT9Q"
+  ],
+  "quickAction": [
+    {
+      "icon": "warning_hsbcnet.png",
+      "itemtype": "About HSBCnet app itemType",
+      "title": [
+        {
+          "en": "About HSBCnet app",
+          "zh_TW": "About HSBCnet app",
+          "zh_CN": "关于HSBCnet应用"
+        }
+      ],
+      "action": {
+        "url": "file:///B2N/HSBCnet/MSP_web/HSBCnet/Logon/Logon.html#3DTouchTargetID",
+        "postLogonURL": "file:///B2N/HSBCnet/MSP_web/HSBCnet/Information_UI16/Information_UI16.html"
+      },
+      "app": 0,
+      "order": 0,
+      "isBrowser": 0
+    }
+  ],
+  "forceUpdate": [
+    {
+      "android": [
+        {
+          "forceUpdate": 0,
+          "forceUpdateTargetVersion": "1.5.14.38",
+          "forceUpdateLink": "https://play.google.com/store/apps/details?id=com.hsbc.hsbcnet&hl=en",
+          "forceUpdateMessage": [
+            {
+              "en": "The latest HSBCnet Mobile App with the latest features is available, please update to continue using HSBCnet Mobile."
+            }
+          ],
+          "forceEntityListChecksumUpdate": "202201011234"
+        }
+      ],
+      "ios": [
+        {
+          "forceUpdate": 0,
+          "forceUpdateVersion": "1.5.14.38",
+          "forceUpdateLink": "https://itunes.apple.com/app/hsbcnet-mobile/id887385854",
+          "forceUpdateMessage": [
+            {
+              "en": "The latest HSBCnet Mobile App with the latest features is available, please update to continue using HSBCnet Mobile."
+            }
+          ],
+          "forceEntityListChecksumUpdate": "202201011234"
+        }
+      ]
+    }
+  ],
+  "alertApplyRegionConfig": [
+    {
+      "alertApply": 1,
+      "alertApplyTitle": [
+        {
+          "en": "New Update"
+        }
+      ],
+      "alertApplyMessage": [
+        {
+          "en": "There is a new version of the App available. If you are already logged on you will be logged out and the app will automatically download the update, please click continue to proceed."
+        }
+      ],
+      "alertApplyConfirm": [
+        {
+          "en": "Continue"
+        }
+      ]
+    }
+  ],
+  "cookiePolicy": "netscape",
+  "languages": [
+    {
+      "orders": [
+        {
+          "id": "ar"
+        },
+        {
+          "id": "cs"
+        },
+        {
+          "id": "el"
+        },
+        {
+          "id": "en"
+        },
+        {
+          "id": "en_us"
+        },
+        {
+          "id": "es"
+        },
+        {
+          "id": "es_mx"
+        },
+        {
+          "id": "fr"
+        },
+        {
+          "id": "fr_ca"
+        },
+        {
+          "id": "in"
+        },
+        {
+          "id": "iw"
+        },
+        {
+          "id": "ja"
+        },
+        {
+          "id": "ko"
+        },
+        {
+          "id": "pl"
+        },
+        {
+          "id": "pt"
+        },
+        {
+          "id": "vi"
+        },
+        {
+          "id": "tr"
+        },
+        {
+          "id": "zh"
+        },
+        {
+          "id": "zh_tw"
+        },
+        {
+          "id": "ru"
+        },
+        {
+          "id": "kk"
+        },
+        {
+          "id": "sk"
+        }
+      ]
+    }
+  ],
+  "home": [
+    {
+      "homelabel": [
+        {
+          "en": "Welcome to"
+        }
+      ],
+      "optionalhomelabel": [
+        {
+          "en": "mobile"
+        }
+      ],
+      "homelogo": [
+        {
+          "en": "ph_logo.png"
+        }
+      ],
+      "thumbnailModules": [
+        {
+          "ios": [
+            {
+              "row": [
+                {
+                  "id": "personalLogon"
+                }
+              ]
+            }
+          ],
+          "android": [
+            {
+              "row": [
+                {
+                  "id": "personalLogon"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "skipPreLogon": true
+    }
+  ],
+  "webresources": [
+    {
+      "HSBCnet.1.5.14": [
+        {
+          "expectedTime": 20,
+          "globaltemplateurl": [],
+          "globaltemplate": [
+            {
+              "zipurl": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/R79/27900g/R79/sde3/ft/mmon/cmb-mobile-cbp-lib-background-imgs-prod.zip",
+              "hashcode": "cc26d231dcc55e585cd436fd3cef64e589e32f4473df939392ec0c8cfc392a50d161826e2470a88a22812fb5b56644e313421e054e24f84aa683e29bc4eee6d9",
+              "alwaysunzip": 0,
+              "type": "html",
+              "optional": 0,
+              "mapping": [
+                "cmb-mobile-cbp-lib-background-imgs-prod"
+              ],
+              "size": 1295
+            },
+            {
+              "zipurl": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/R79/27900g/R79/sde3/ft/mmon/cmb-mobile-cbp-lib-imgs-prod.zip",
+              "hashcode": "bb034171fac96e3642a6de75439d0d5e729911386e5b32414bb3c0ed873ded8dafadf9f333037eba981137bdaf8e90b7beecb8ec2af84c64ef462d8b5508c1f9",
+              "alwaysunzip": 0,
+              "type": "html",
+              "optional": 0,
+              "mapping": [
+                "cmb-mobile-cbp-lib-imgs-prod"
+              ],
+              "size": 808
+            },
+            {
+              "zipurl": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/R79/27900g/R79/sde3/ft/mmon/cmb-mobile-cbp-lib-js-prod.zip",
+              "hashcode": "8db3f364cdb20ec4acd7524ffa72e92dad6bef49f2d9efcc486743b1f2634c10af433c8964b40676913d11f9e6e6711be30cd146ae5ea946c446fb9b0c64f03d",
+              "alwaysunzip": 0,
+              "type": "html",
+              "optional": 0,
+              "mapping": [
+                "cmb-mobile-cbp-lib-js-prod"
+              ],
+              "size": 750
+            },
+            {
+              "zipurl": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/R79/27900g/R79/sde3/ft/mmon/cmb-mobile-common-prod.zip",
+              "hashcode": "e4558404ccf4a1f51d254c32d405b3f8f6e91119b56c8e7aca7b52bf43cee1e9d824a2309d492d4c7226d2f4ddf0e479b6d449c11b8ebfa6e2684b7b9814ccf7",
+              "alwaysunzip": 0,
+              "type": "html",
+              "optional": 0,
+              "mapping": [
+                "cmb-mobile-common-prod"
+              ],
+              "size": 1024
+            },
+            {
+              "zipurl": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/R79/27900g/R79/sde3/ft/mmon/cmb-mobile-hsbcnet-config-prod.zip",
+              "hashcode": "0f1615acdffe18e7b1cf4c494779cc553d5e6cacd6229669f7291e3bad7e3888a82a5cbee8b3c02bef955ace199567acb34776a53d0242fc2ea3392a5bf50660",
+              "alwaysunzip": 0,
+              "type": "html",
+              "optional": 0,
+              "mapping": [
+                "cmb-mobile-hsbcnet-config-prod"
+              ],
+              "size": 8
+            },
+            {
+              "zipurl": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/R79/27900g/R79/sde3/ft/mmon/cmb-mobile-hsbcnet-other-tool-prod.zip",
+              "hashcode": "15afec216fe1c26a91102aa3936a6578e637326432f5c1204e7df0b19ba4c2aaa6e7d767735cc4781ef65dc692321f1bd6dcb307b55ba68d8142683d0a61deff",
+              "alwaysunzip": 0,
+              "type": "html",
+              "optional": 0,
+              "mapping": [
+                "cmb-mobile-hsbcnet-other-tool-prod"
+              ],
+              "size": 1089
+            },
+            {
+              "zipurl": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/R79/27900g/R79/sde3/ft/mmon/cmb-mobile-hsbcnet-payments-tool-prod.zip",
+              "hashcode": "2ae09991d301a58a831ce5f52b940704607284071de982b99b1cd167288e0be4a808618b474d8bd889dd10e2a4a80f85f90ee58f9d0a112bfce05cb9f585ab96",
+              "alwaysunzip": 0,
+              "type": "html",
+              "optional": 0,
+              "mapping": [
+                "cmb-mobile-hsbcnet-payments-tool-prod"
+              ],
+              "size": 1175
+            },
+            {
+              "zipurl": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/R79/27900g/R79/sde3/ft/mmon/cmb-mobile-msp-lib-prod.zip",
+              "hashcode": "d70896651d62f7482ec2f75c296dadb1f58752f0b6cf35f0b1a11f69e3bff93072100ad3d6e4952577ba6cbbf86fa3aa38babf189e23fdee5a63b0ce85765682",
+              "alwaysunzip": 0,
+              "type": "html",
+              "optional": 0,
+              "mapping": [
+                "cmb-mobile-msp-lib-prod"
+              ],
+              "size": 1400
+            },
+            {
+              "zipurl": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/R79/27900g/R79/sde3/ft/mmon/trade-tracker-client-pack-global.zip",
+              "hashcode": "269fbe0e257ade2016bf41bf1558238986a53e75472ab50e266eeece24ebad8e351bea705e74c5896cc444090a7c97a88aa797d601b128c820e9d9bd89aa7a23",
+              "alwaysunzip": 0,
+              "type": "html",
+              "optional": 0,
+              "mapping": [
+                "trade-tracker-client-pack-global"
+              ],
+              "size": 946
+            }
+          ],
+          "localtemplate": []
+        }
+      ]
+    }
+  ],
+  "copyright": [
+    {
+      "en": "©HSBC Bank plc %year%. All rights reserved."
+    }
+  ],
+  "requestUrlNameArr": [
+    "HSBCnetLitePaymentSummaryEmbedded",
+    "FUAuthSummaryListLaunched",
+    "ITSMobileAuthService"
+  ],
+  "localisedString": [
+    {
+      "ok": [
+        {
+          "ar": "موافق",
+          "cs": "OK",
+          "el": "ΟΚ",
+          "en": "OK",
+          "en_us": "OK",
+          "es": "OK",
+          "es_mx": "OK",
+          "fr": "OK",
+          "fr_ca": "OK",
+          "in": "OK",
+          "iw": "אישור",
+          "ja": "OK",
+          "ko": "확인",
+          "pl": "OK",
+          "pt": "OK",
+          "tr": "OK",
+          "vi": "OK",
+          "zh": "确定",
+          "zh_tw": "確定"
+        }
+      ],
+      "cancel": [
+        {
+          "ar": "إلغاء",
+          "cs": "Zrušit",
+          "el": "Ακύρωση",
+          "en": "Cancel",
+          "en_us": "Cancel",
+          "es": "Cancelar",
+          "es_mx": "Cancelar",
+          "fr": "Annuler",
+          "fr_ca": "Annuler",
+          "in": "Batalkan",
+          "iw": "ביטול",
+          "ja": "取消",
+          "ko": "취소",
+          "pl": "Anuluj",
+          "pt": "Cancelar",
+          "tr": "İptal",
+          "vi": "Hủy",
+          "zh": "取消",
+          "zh_tw": "取消"
+        }
+      ],
+      "logOffTitle": [
+        {
+          "ar": "تسجيل الخروج",
+          "cs": "Odhlásit se",
+          "el": "Αποσύνδεση",
+          "en": "Log Off",
+          "en_us": "Log Off",
+          "es": "Cerrar sesión",
+          "es_mx": "Cerrar sesión",
+          "fr": "Se déconnecter",
+          "fr_ca": "Fermer la session",
+          "in": "Log Off",
+          "iw": "התנתקות",
+          "ja": "ログオフ",
+          "ko": "로그아웃",
+          "pl": "Wyloguj",
+          "pt": "Sair",
+          "tr": "Oturumu Kapat",
+          "vi": "Đăng xuất",
+          "zh": "退出",
+          "zh_tw": "登出"
+        }
+      ],
+      "logOffMessage": [
+        {
+          "ar": "هل أنت متأكد من رغبتك في تسجيل الخروج؟",
+          "cs": "Opravdu se chcete odhlásit?",
+          "el": "Είστε σίγουρος ότι θέλετε να αποσυνδεθείτε; ",
+          "en": "Are you sure you want to Log Off ?",
+          "en_us": "Are you sure you want to Log Off ?",
+          "es": "¿Está seguro que desea cerrar sesión?",
+          "es_mx": "¿Está seguro que desea cerrar sesión?",
+          "fr": "Voulez-vous vraiment vous déconnecter ?",
+          "fr_ca": "Voulez-vous vraiment fermer la session?",
+          "in": "Yakin ingin keluar?",
+          "iw": "האם אתה בטוח שברצונך להתנתק?",
+          "ja": "ログオフしますか？",
+          "ko": "로그아웃 하시겠습니까?",
+          "pl": "Na pewno chcesz się wylogować?",
+          "pt": "Tem certeza de que deseja sair?",
+          "tr": "Oturumu kapatmak istediğinize emin misiniz?",
+          "vi": "Bạn có chắc chắn muốn đăng xuất?",
+          "zh": "您确定要退出吗？",
+          "zh_tw": "您確定要登出嗎？"
+        }
+      ],
+      "logOffPositiveButton": [
+        {
+          "ar": "تسجيل الخروج",
+          "cs": "Odhlásit se",
+          "el": "Αποσύνδεση",
+          "en": "Log Off",
+          "en_us": "Log Off",
+          "es": "Cerrar sesión",
+          "es_mx": "Cerrar sesión",
+          "fr": "Se déconnecter",
+          "fr_ca": "Fermer la session",
+          "in": "Log Off",
+          "iw": "התנתקות",
+          "ja": "ログオフ",
+          "ko": "로그아웃",
+          "pl": "Wyloguj",
+          "pt": "Sair",
+          "tr": "Oturumu Kapat",
+          "vi": "Đăng xuất",
+          "zh": "退出",
+          "zh_tw": "登出"
+        }
+      ],
+      "logOffNegativeButton": [
+        {
+          "ar": "إلغاء",
+          "cs": "Zrušit",
+          "el": "Ακύρωση",
+          "en": "Cancel",
+          "en_us": "Cancel",
+          "es": "Cancelar",
+          "es_mx": "Cancelar",
+          "fr": "Annuler",
+          "fr_ca": "Annuler",
+          "in": "Batalkan",
+          "iw": "ביטול",
+          "ja": "取消",
+          "ko": "취소",
+          "pl": "Anuluj",
+          "pt": "Cancelar",
+          "tr": "İptal",
+          "vi": "Hủy",
+          "zh": "取消",
+          "zh_tw": "取消"
+        }
+      ],
+      "networkError": [
+        {
+          "ar": "خطأ اتصال بالشبكة",
+          "cs": "Chyba síťového připojení",
+          "el": "Σφάλμα σύνδεσης δικτύου",
+          "en": "Network connection error",
+          "en_us": "Network connection error",
+          "es": "Error de conexión de red",
+          "es_mx": "Error de conexión de red",
+          "fr": "Erreur de connexion réseau",
+          "fr_ca": "Erreur de connexion au réseau",
+          "in": "Kesalahan koneksi jaringan",
+          "iw": "שגיאת חיבור לרשת",
+          "ja": "ネットワーク接続エラー",
+          "ko": "네트워크 연결 오류",
+          "pl": "Błąd połączenia z siecią",
+          "pt": "Erro na conexão com a rede",
+          "tr": "Ağ bağlantısı hatası",
+          "vi": "Lỗi kết nối mạng",
+          "zh": "网络连接错误",
+          "zh_tw": "網路連接錯誤"
+        }
+      ],
+      "networkErrorMessage": [
+        {
+          "ar": "برجاء التحقق من اتصال الإنترنت لديك أو أعد المحاولة لاحقًا.",
+          "cs": "Zkontrolujte připojení k internetu nebo to zkuste později.",
+          "el": "� αρακαλείσθε ελέγξτε την σύνδεση σας στο διαδίκτυο ή δοκιμάστε αργότερα. ",
+          "en": "Please check your internet connection or try again later.",
+          "en_us": "Please check your internet connection or try again later.",
+          "es": "Favor de verificar su conexión a internet e intenar nuevamente.",
+          "es_mx": "Favor de verificar su conexión a internet e intenar nuevamente.",
+          "fr": "Veuillez vérifier votre connexion internet ou réessayer ultérieurement.",
+          "fr_ca": "Veuillez vérifier votre connexion Internet ou essayer de nouveau plus tard.",
+          "in": "Harap periksa koneksi internet Anda atau coba lagi nanti.",
+          "iw": "בדוק את החיבור שלך לאינטרנט או נסה שוב מאוחר יותר.",
+          "ja": "インターネットの接続を確認してく� さい。または後程アクセスしてく� さい。",
+          "ko": "인터넷 연결을 확인하거나 잠시 후 다시 시도해 주십시오.",
+          "pl": "Sprawdź połączenie internetowe lub spróbuj ponownie później.",
+          "pt": "Verifique sua conexão com a Internet ou tente novamente mais tarde.",
+          "tr": "Lütfen internet bağlantınızı kontrol edin veya daha sonra tekrar deneyin.",
+          "vi": "Vui lòng kiểm tra kết nối mạng của bạn hoặc thử lại sau.",
+          "zh": "请检查网络连接或稍后重试。",
+          "zh_tw": "請檢查您的網路連線或稍後再試。"
+        }
+      ],
+      "notSupported": [
+        {
+          "ar": "افتح في متصفح جديد؟",
+          "cs": "Otevřít v novém prohlížeči?",
+          "el": "Άνοιγμα σε νέο πρόγραμμα περιήγησης;",
+          "en": "Open in a new browser ?",
+          "en_us": "Open in a new browser ?",
+          "es": "Abrir en un nuevo navegador",
+          "es_mx": "Abrir en un nuevo navegador",
+          "fr": "Ouvrir dans un nouveau navigateur� ?",
+          "fr_ca": "Ouvrir dans un nouveau navigateur?",
+          "in": "Buka dalam browser baru?",
+          "iw": "האם לפתוח בדפדפן חדש?",
+          "ja": "新しいブラウザーで開きますか？",
+          "ko": "새 브라우저에서 열까요?",
+          "pl": "Otworzyć w nowej przeglądarce?",
+          "pt": "Abrir em um novo navegador?",
+          "tr": "Yeni bir tarayıcı açılsın mı?",
+          "vi": "Mở trong trình duyệt mới?",
+          "zh": "在新的浏览器中打开？",
+          "zh_tw": "在新瀏覽器中打開嗎？"
+        }
+      ],
+      "openInBrowser": [
+        {
+          "ar": "افتح في متصفح جديد؟",
+          "cs": "Otevřít v novém prohlížeči?",
+          "el": "Άνοιγμα σε νέο πρόγραμμα περιήγησης;",
+          "en": "Open in a new browser ?",
+          "en_us": "Open in a new browser ?",
+          "es": "Abrir en un nuevo navegador",
+          "es_mx": "Abrir en un nuevo navegador",
+          "fr": "Ouvrir dans un nouveau navigateur� ?",
+          "fr_ca": "Ouvrir dans un nouveau navigateur?",
+          "in": "Buka dalam browser baru?",
+          "iw": "האם לפתוח בדפדפן חדש?",
+          "ja": "新しいブラウザーで開きますか？",
+          "ko": "새 브라우저에서 열까요?",
+          "pl": "Otworzyć w nowej przeglądarce?",
+          "pt": "Abrir em um novo navegador?",
+          "tr": "Yeni bir tarayıcı açılsın mı?",
+          "vi": "Mở trong trình duyệt mới?",
+          "zh": "在新的浏览器中打开？",
+          "zh_tw": "在新瀏覽器中打開嗎？"
+        }
+      ],
+      "notSupportedMessage": [
+        {
+          "en": "The latest HSBC Mobile App with the latest features is available, please update to continue using HSBC Mobile."
+        }
+      ],
+      "downloadErrorTitle": [
+        {
+          "en": "App Update",
+          "zh_CN": "应用更新",
+          "zh_TW": "应用更新"
+        }
+      ],
+      "downloadError": [
+        {
+          "en": "An error occured during the update of the application, please try again.",
+          "zh_CN": "下载最新资源出错，请重试",
+          "zh_TW": "下載最新資源出錯，请重试"
+        }
+      ],
+      "downloadErrorRetry": [
+        {
+          "en": "Try Again",
+          "zh_CN": "重试",
+          "zh_TW": "重試"
+        }
+      ],
+      "resourcePrepareTitle": [
+        {
+          "en": "App Update downloading. Please do not close the app or turn off your device."
+        }
+      ],
+      "downloadDialogTitleWithoutCancelOption": [
+        {
+          "en": "App update"
+        }
+      ],
+      "downloadOverTime": [
+        {
+          "en": "The update is taking longer than expected. Please check your network connection."
+        }
+      ],
+      "downloadUpdateComplete": [
+        {
+          "en": "Complete"
+        }
+      ],
+      "downloadDialogTitle": [
+        {
+          "en": "App update"
+        }
+      ],
+      "downloadDialogMessage": [
+        {
+          "en": "To continue using the HSBC Mobile Banking app, you must download an %size% MB update. We have detected that you are not connected to WiFi, so the download will take longer and use your mobile data plan. If you do not wish to download it now, please close this app until you are connected to WiFi."
+        }
+      ],
+      "downloadDialogMessageWithoutCancelOption": [
+        {
+          "en": "To continue using the HSBC Mobile Banking app, you must download an %size% MB update. We have detected that your device is not connected to WiFi, so the download will take longer and use your mobile data plan. If you do not wish to download it now, please close this app"
+        }
+      ],
+      "buttonText": [
+        {
+          "en": "Button"
+        }
+      ],
+      "back": [
+        {
+          "en": "back"
+        }
+      ],
+      "linkText": [
+        {
+          "en": "Link"
+        }
+      ],
+      "pageHeading": [
+        {
+          "en": "Heading"
+        }
+      ],
+      "logoText": [
+        {
+          "en": "HSBC Logo"
+        }
+      ],
+      "netLogoText": [
+        {
+          "en": "HSBC"
+        }
+      ],
+      "expandState": [
+        {
+          "en": "expanded"
+        }
+      ],
+      "DoubleTapToClose": [
+        {
+          "en": "Double Tap To Close"
+        }
+      ],
+      "DoubleTapToExpend": [
+        {
+          "en": "Double Tap To Expend"
+        }
+      ],
+      "informationButtonTitle": [
+        {
+          "en": "Information"
+        }
+      ],
+      "downloadDialogConfirm": [
+        {
+          "en": "OK"
+        }
+      ],
+      "downloadDialogCancel": [
+        {
+          "en": "Cancel"
+        }
+      ]
+    }
+  ],
+  "host": "https://www.sde3-c.uk.hsbcnet.com",
+  "bbsboConfig": [
+    {
+      "tradeAuthSupportSubService": {
+        "iOS": "IM,GU,SD,BI,IF,PR,PS",
+        "android": "IM,GU,SD,BI,IF,PR,PS"
+      },
+      "cdicUrls": {
+        "sadc": "https://www.sadc.ca/votre-protection/quels-depots-sont-proteges",
+        "cdic": "https://www.cdic.ca/your-coverage/protecting-your-deposit"
+      },
+      "enableCACCPendingTransaction": true,
+      "enableCACCActivate": true,
+      "enableBBXaccountList": true,
+      "enableDSPLogon": true,
+      "rememberMeSupportCountries": [
+        "TW",
+        "GB",
+        "US",
+        "CA",
+        "BD",
+        "MU",
+        "PH",
+        "DZ",
+        "BH",
+        "KR",
+        "KW",
+        "OM",
+        "QA",
+        "TR",
+        "AE",
+        "MO",
+        "NZ",
+        "AU",
+        "VN",
+        "CN",
+        "IN",
+        "MY"
+      ],
+      "enableIPV6": false,
+      "enabledPandiaTrackPaySupport": true,
+      "enableInAppMessageSecurityDevicePage": true,
+      "enableTrackPayment": true,
+      "enableCreatePayment": true,
+      "enableIIF": true,
+      "enableFX": true,
+      "enableFxPrompt": true,
+      "triggerFXpromptForAll": true,
+      "enableTradeTracker": true,
+      "enableRiskyAlert": true,
+      "PaymnetCreationForPOPSwitch": true,
+      "countriesForBeneficiaryPop": [
+        "BH",
+        "MY",
+        "EG",
+        "IN",
+        "AE",
+        "ID"
+      ],
+      "trackPaymentSupportCountries": [
+        "GB",
+        "AE",
+        "CA",
+        "HK",
+        "IN",
+        "AU",
+        "NZ",
+        "BD",
+        "SG",
+        "US",
+        "SA",
+        "ID",
+        "MO",
+        "MU",
+        "PH",
+        "LK",
+        "TH",
+        "VN",
+        "CN",
+        "MX",
+        "BE",
+        "FR",
+        "IE",
+        "IT",
+        "JP",
+        "KR",
+        "LU",
+        "MY",
+        "NL",
+        "ES",
+        "QA",
+        "DZ",
+        "BH",
+        "KW",
+        "EG",
+        "BM",
+        "DE",
+        "MT",
+        "PL",
+        "OM",
+        "TW"
+      ],
+      "tradeAuthSupportCountries": [
+        "AU",
+        "CA",
+        "SG",
+        "IN",
+        "HK",
+        "GB",
+        "NZ",
+        "BD",
+        "LK",
+        "TH",
+        "US",
+        "ES",
+        "CH",
+        "MX",
+        "SA",
+        "CN",
+        "MY",
+        "AE",
+        "BH",
+        "KW",
+        "QA",
+        "EG",
+        "OM",
+        "ID",
+        "PH",
+        "PL",
+        "VN",
+        "MU",
+        "TW"
+      ],
+      "tradeSupportVersion": "5",
+      "biometrics": [
+        {
+          "touchIdCountryWhiteListIOS": [
+            "AUHBAU",
+            "JPHBAP",
+            "GBHBEU",
+            "AEHBME",
+            "INHBAP",
+            "USHBUS",
+            "CAHBCA",
+            "CNHASE",
+            "CNHBAP",
+            "FRHBFR",
+            "BMHBBM",
+            "NZHBAP",
+            "QAHBME",
+            "SGHBAP",
+            "SGHBOS",
+            "KWHBME",
+            "MUHBAP",
+            "MUMOBU",
+            "KRHBAP",
+            "VNHBAP",
+            "BHHBME",
+            "LKHBAP",
+            "AMHBAM",
+            "BEHBEU",
+            "CZHBEU",
+            "DEHTDE",
+            "NLHBEU",
+            "PLHBPL",
+            "ZAHBEU",
+            "ESHBEU",
+            "CHHBEU",
+            "HKHASE",
+            "HKHBAP",
+            "MXHBMI",
+            "CLHBCL",
+            "IEHBEU",
+            "MTHBMT",
+            "ITHBEU",
+            "THHBAP",
+            "IDHBAP",
+            "GBHRFB",
+            "PHHBAP",
+            "MYHBMB",
+            "LUHBEU",
+            "ILHBEU",
+            "DZHBFR",
+            "MOHBAP",
+            "BDHBAP",
+            "CAKCTR",
+            "SASABB",
+            "LKFCTU",
+            "PHHBPH",
+            "GBKCTR",
+            "HKKCTR",
+            "KRKCTR",
+            "MOKCTR",
+            "USKCTR",
+            "BRHBBZ",
+            "TWHBAP",
+            "TWAPOB",
+            "GBHINV"
+          ],
+          "touchIdCountryWhiteListAndroid": [
+            "AEHBME",
+            "AUHBAU",
+            "CLHBCL",
+            "CNHASE",
+            "FRHBFR",
+            "GBHBEU",
+            "GBHRFB",
+            "HKHBAP",
+            "IEHBEU",
+            "ILHBEU",
+            "ITHBEU",
+            "LUHBEU",
+            "MUHBAP",
+            "MTHBMT",
+            "MUMOBU",
+            "MXHBMI",
+            "BEHBEU",
+            "CAHBCA",
+            "CZHBEU",
+            "INHBAP",
+            "IDHBAP",
+            "NLHBEU",
+            "NZHBAP",
+            "PHHBAP",
+            "PLHBPL",
+            "SGHBAP",
+            "SGHBOS",
+            "LKHBAP",
+            "USHBUS",
+            "VNHBAP",
+            "ZAHBEU",
+            "AMHBAM",
+            "CNHBAP",
+            "KRHBAP",
+            "THHBAP",
+            "DZHBFR",
+            "BDHBAP",
+            "HKHASE",
+            "JPHBAP",
+            "BHHBME",
+            "DEHTDE",
+            "MYHBMB",
+            "ESHBEU",
+            "CHHBEU",
+            "QAHBME",
+            "KWHBME",
+            "CAKCTR",
+            "SASABB",
+            "MOHBAP",
+            "LKFCTU",
+            "PHHBPH",
+            "GBKCTR",
+            "HKKCTR",
+            "KRKCTR",
+            "MOKCTR",
+            "USKCTR",
+            "BRHBBZ",
+            "TWHBAP",
+            "TWAPOB",
+            "GBHINV"
+          ],
+          "faceIDBlackCountryListIOS": [
+            "MUMOBU",
+            "OMHOMB",
+            "EGHBEG",
+            "TRHBTR",
+            "RUHCRR",
+            "ARHBAR"
+          ]
+        }
+      ],
+      "inAppMessageVersion": "1.0",
+      "enableRealTimeDebugLogging": true,
+      "autoEntitlementUrl": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ss-pa-user-mgmt-sde3-proxy/v2/",
+      "createPayCASWhiteList": [
+        {
+          "PPCountries": [
+            "AE",
+            "AM",
+            "AU",
+            "BD",
+            "BH",
+            "BM",
+            "CA",
+            "DE",
+            "DZ",
+            "ES",
+            "GB",
+            "GR",
+            "IE",
+            "IN",
+            "IT",
+            "JE",
+            "KW",
+            "LK",
+            "LU",
+            "MO",
+            "MT",
+            "MU",
+            "MX",
+            "MY",
+            "NZ",
+            "OM",
+            "PH",
+            "SG",
+            "TH",
+            "TR",
+            "US",
+            "VN",
+            "ZA",
+            "EG",
+            "FR"
+          ],
+          "ITCountries": [
+            "AE",
+            "AM",
+            "AU",
+            "BE",
+            "BH",
+            "BM",
+            "CA",
+            "CH",
+            "CL",
+            "ES",
+            "GR",
+            "IT",
+            "KW",
+            "LU",
+            "MT",
+            "MU",
+            "MX",
+            "MY",
+            "NL",
+            "NZ",
+            "OM",
+            "SA",
+            "SG",
+            "TH",
+            "US",
+            "VN",
+            "ZA",
+            "FR",
+            "AE",
+            "AM",
+            "AU",
+            "BE",
+            "BH",
+            "BM",
+            "CA",
+            "CH",
+            "CL",
+            "ES",
+            "GR",
+            "IT",
+            "KW",
+            "LU",
+            "MT",
+            "MU",
+            "MX",
+            "MY",
+            "NL",
+            "NZ",
+            "OM",
+            "SA",
+            "SG",
+            "TH",
+            "US",
+            "VN",
+            "ZA",
+            "FR",
+            "GB"
+          ],
+          "PayBillCountries": [
+            "AU",
+            "BH",
+            "BM",
+            "CA",
+            "LU",
+            "MT",
+            "MX",
+            "MY",
+            "OM",
+            "SA",
+            "SG",
+            "US"
+          ]
+        }
+      ],
+      "createPayNativeWhiteList": [
+        {
+          "PPCountries": [
+            "SG",
+            "US",
+            "CA",
+            "AE",
+            "MY",
+            "MX",
+            "BM",
+            "OM",
+            "MT",
+            "IN",
+            "AU",
+            "BD",
+            "DZ",
+            "IT",
+            "ES",
+            "IE",
+            "LU",
+            "GR",
+            "GB",
+            "TH",
+            "EG",
+            "KW",
+            "FR"
+          ],
+          "ITCountries": [
+            "AM",
+            "AU",
+            "BH",
+            "BE",
+            "BM",
+            "CA",
+            "CL",
+            "GR",
+            "IT",
+            "KW",
+            "LU",
+            "MY",
+            "MT",
+            "MU",
+            "MX",
+            "NL",
+            "NZ",
+            "OM",
+            "SA",
+            "SG",
+            "ZA",
+            "ES",
+            "CH",
+            "TH",
+            "AE",
+            "US",
+            "VN",
+            "FR",
+            "GB"
+          ],
+          "PayBillCountries": []
+        }
+      ],
+      "ISOConfig": {
+        "PP": {
+          "TH": [],
+          "GB": []
+        }
+      },
+      "cutOffTimeSupportedLanguage": {
+        "en": "en_gb",
+        "zh": "zh_cn",
+        "zh_tw": "zh_tw",
+        "fr_ca": "fr_ca",
+        "es_MX": "es_mx",
+        "es_mx": "es_mx",
+        "fr": "fr_fr",
+        "ar": "ar_ae",
+        "in": "in_id"
+      },
+      "fintracEnable": true,
+      "fintracCountryCodeList": [
+        "AF",
+        "AL",
+        "DZ",
+        "AS",
+        "AD",
+        "AO",
+        "AI",
+        "AQ",
+        "AG",
+        "AR",
+        "AM",
+        "AW",
+        "AU",
+        "AT",
+        "AZ",
+        "BS",
+        "BH",
+        "BD",
+        "BB",
+        "BY",
+        "BE",
+        "BZ",
+        "BJ",
+        "BM",
+        "BT",
+        "BO",
+        "BQ",
+        "BA",
+        "BW",
+        "BV",
+        "BR",
+        "IO",
+        "BN",
+        "BG",
+        "BF",
+        "BI",
+        "KH",
+        "CM",
+        "CA",
+        "CV",
+        "KY",
+        "CF",
+        "TD",
+        "CL",
+        "CN",
+        "CX",
+        "CC",
+        "CO",
+        "KM",
+        "CG",
+        "CD",
+        "CK",
+        "CR",
+        "HR",
+        "CW",
+        "CY",
+        "CZ",
+        "CI",
+        "DK",
+        "DJ",
+        "DM",
+        "DO",
+        "EC",
+        "EG",
+        "SV",
+        "GQ",
+        "ER",
+        "EE",
+        "SZ",
+        "ET",
+        "FK",
+        "FO",
+        "FJ",
+        "FI",
+        "FR",
+        "GF",
+        "PF",
+        "TF",
+        "GA",
+        "GM",
+        "GE",
+        "DE",
+        "GH",
+        "GI",
+        "GR",
+        "GL",
+        "GD",
+        "GP",
+        "GU",
+        "GT",
+        "GG",
+        "GN",
+        "GW",
+        "GY",
+        "HT",
+        "HM",
+        "VA",
+        "HN",
+        "HK",
+        "HU",
+        "IS",
+        "IN",
+        "ID",
+        "IQ",
+        "IE",
+        "IM",
+        "IL",
+        "IT",
+        "JM",
+        "JP",
+        "JE",
+        "JO",
+        "KZ",
+        "KE",
+        "KI",
+        "KR",
+        "KW",
+        "KG",
+        "LA",
+        "LV",
+        "LB",
+        "LS",
+        "LR",
+        "LY",
+        "LI",
+        "LT",
+        "LU",
+        "MO",
+        "MK",
+        "MG",
+        "MW",
+        "MY",
+        "MV",
+        "ML",
+        "MT",
+        "MH",
+        "MQ",
+        "MR",
+        "MU",
+        "YT",
+        "MX",
+        "FM",
+        "MD",
+        "MC",
+        "MN",
+        "ME",
+        "MS",
+        "MA",
+        "MZ",
+        "MM",
+        "NA",
+        "NR",
+        "NP",
+        "NL",
+        "AN",
+        "NC",
+        "NZ",
+        "NI",
+        "NE",
+        "NG",
+        "NU",
+        "NF",
+        "MP",
+        "NO",
+        "OM",
+        "PK",
+        "PW",
+        "PS",
+        "PA",
+        "PG",
+        "PY",
+        "PE",
+        "PH",
+        "PN",
+        "PL",
+        "PT",
+        "PR",
+        "QA",
+        "SS",
+        "RO",
+        "RU",
+        "RW",
+        "RE",
+        "BL",
+        "SH",
+        "KN",
+        "LC",
+        "MF",
+        "PM",
+        "VC",
+        "WS",
+        "SM",
+        "ST",
+        "SA",
+        "SN",
+        "RS",
+        "SC",
+        "SL",
+        "SG",
+        "SX",
+        "SK",
+        "SI",
+        "SB",
+        "SO",
+        "ZA",
+        "GS",
+        "ES",
+        "LK",
+        "SD",
+        "SR",
+        "SJ",
+        "SE",
+        "CH",
+        "TW",
+        "TJ",
+        "TZ",
+        "TH",
+        "TL",
+        "TG",
+        "TK",
+        "TO",
+        "TT",
+        "TN",
+        "TR",
+        "TM",
+        "TC",
+        "TV",
+        "UG",
+        "UA",
+        "AE",
+        "GB",
+        "US",
+        "UM",
+        "UY",
+        "UZ",
+        "VU",
+        "VE",
+        "VN",
+        "VG",
+        "VI",
+        "WF",
+        "EH",
+        "YE",
+        "ZM",
+        "ZW",
+        "AX"
+      ],
+      "lmd": [
+        {
+          "enableLmd": true,
+          "enableLmdForIOS": true,
+          "lmdHost": "https://lmd-preprod.secure.hsbcnet.com/openam/?src=mobile",
+          "ssoLmd": true,
+          "ssolmdHost": "https://lmd-preprod.secure.hsbcnet.com/sso?src=mobile"
+        }
+      ],
+      "Qtm": [
+        {
+          "enableQtm": true,
+          "QtmHost": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-accounts-sde3-proxy/v1"
+        }
+      ],
+      "Pandia": [
+        {
+          "enablePandia": "true",
+          "PandiaHost_UK": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-accounts-sde3-proxy/v1",
+          "PandiaHost_CN": "",
+          "enableLedgerBalanceForLNCountryList": [
+            "CN",
+            "SG",
+            "CA",
+            "US",
+            "IN"
+          ]
+        }
+      ],
+      "paymentAuthExistingRolloutCountries": [
+        "US",
+        "CA",
+        "SG"
+      ],
+      "mobileMessageExistingRolloutCountries": [
+        "US",
+        "CA"
+      ],
+      "notificationSupportCountries": [],
+      "fxNotificationSupportCountries": [
+        "SG"
+      ],
+      "baiduPushEnableForAndroid": false,
+      "messagingSupportCountries": [
+        "US",
+        "CA",
+        "BM",
+        "PL",
+        "MT",
+        "GB",
+        "IN",
+        "AU",
+        "QA",
+        "AE",
+        "EG",
+        "BH",
+        "HK",
+        "NZ",
+        "KW",
+        "DZ",
+        "FR",
+        "MY"
+      ],
+      "VASupportCountries": [
+        "DE",
+        "MT",
+        "US",
+        "GB"
+      ],
+      "vaReplyWaitingTime": 1000,
+      "appRatingSupportCountries": [
+        "US",
+        "CA",
+        "SG",
+        "GB",
+        "HK",
+        "MY",
+        "IN",
+        "AE",
+        "MX",
+        "SA",
+        "ID",
+        "AU"
+      ],
+      "clickToCallFlags": {
+        "shouldCallSubProp": false,
+        "shouldUseCache": true
+      },
+      "clickToCallLanguageMap": {
+        "English": [
+          "en",
+          "en_us",
+          "en_u1",
+          "HASE_en"
+        ],
+        "Spanish": [
+          "es",
+          "es_mx"
+        ],
+        "Arabic": [
+          "ar"
+        ],
+        "French": [
+          "fr",
+          "fr_ca"
+        ],
+        "Mandarin": [
+          "zh",
+          "HASE_zh"
+        ],
+        "Chinese": [
+          "zh_tw",
+          "HASE_zh_tw"
+        ],
+        "Polish": [
+          "pl"
+        ]
+      },
+      "clickToCallLanguageCountryMap": [
+        "CN",
+        "HK"
+      ],
+      "clickToCallSupportCountries": [
+        "GB",
+        "AE",
+        "EG",
+        "MX",
+        "HK",
+        "US",
+        "CA",
+        "CN"
+      ],
+      "clickToCallCloudEnabledCountries": [
+        "GB"
+      ],
+      "BBSBOFeature": [
+        "appRating",
+        "mobileMessaging",
+        "pushNotification",
+        "newOnboarding",
+        "MMAuth",
+        "ACHAuth",
+        "SEPAAuth",
+        "ZenginAuth",
+        "BillAuth",
+        "clickToCall",
+        "paymentCreation",
+        "fxExchangeRates",
+        "tradeAuthorisation",
+        "CACC",
+        "OMGOVT",
+        "authorisations",
+        "KWPOP",
+        "SABBAccountVerification",
+        "enableCbavCheck",
+        "SABBOutward",
+        "SABBInward",
+        "SABBInwardPP",
+        "enableCbavCheck"
+      ],
+      "mobileMessagingEntryPoint": {
+        "US": {
+          "en_u1": "hsbcnet_mobileapp_usen",
+          "default": "hsbcnet_mobileapp_usen"
+        },
+        "CA": {
+          "en": "hsbcnet_mobileapp_canen",
+          "fr": "hsbcnet_mobileapp_canfr",
+          "fr_CA": "hsbcnet_mobileapp_canfr",
+          "default": "hsbcnet_mobileapp_canen"
+        },
+        "BM": {
+          "en": "hsbcnet_mobileapp_bmen",
+          "en_u1": "hsbcnet_mobileapp_bmen",
+          "default": "hsbcnet_mobileapp_bmen"
+        },
+        "GB": {
+          "en": "hsbcnet_mobileapp_uken",
+          "en_u1": "hsbcnet_mobileapp_uken",
+          "default": "hsbcnet_mobileapp_uken"
+        },
+        "PL": {
+          "en": "hsbcnet_mobileapp_plen",
+          "en_u1": "hsbcnet_mobileapp_plen",
+          "pl": "hsbcnet_mobileapp_plpl",
+          "default": "hsbcnet_mobileapp_plen"
+        },
+        "MT": {
+          "en": "hsbcnet_mobileapp_mten",
+          "en_u1": "hsbcnet_mobileapp_mten",
+          "default": "hsbcnet_mobileapp_mten"
+        },
+        "AE": {
+          "en": "hsbcnet_mobileapp_uaen",
+          "en_u1": "hsbcnet_mobileapp_uaen",
+          "default": "hsbcnet_mobileapp_uaen"
+        },
+        "QA": {
+          "en": "hsbcnet_mobileapp_qaen",
+          "en_u1": "hsbcnet_mobileapp_qaen",
+          "default": "hsbcnet_mobileapp_qaen"
+        },
+        "IN": {
+          "en": "hsbcnet_mobileapp_inen",
+          "en_u1": "hsbcnet_mobileapp_inen",
+          "fr": "hsbcnet_mobileapp_infr",
+          "default": "hsbcnet_mobileapp_inen"
+        },
+        "AU": {
+          "en": "hsbcnet_mobileapp_auen",
+          "en_u1": "hsbcnet_mobileapp_auen",
+          "default": "hsbcnet_mobileapp_auen"
+        },
+        "DZ": {
+          "en": "hsbcnet_mobileapp_dzen",
+          "en_u1": "hsbcnet_mobileapp_dzen",
+          "fr": "hsbcnet_mobileapp_dzfr",
+          "default": "hsbcnet_mobileapp_dzen"
+        },
+        "BH": {
+          "en": "hsbcnet_mobileapp_bhen",
+          "en_u1": "hsbcnet_mobileapp_bhen",
+          "default": "hsbcnet_mobileapp_bhen"
+        },
+        "EG": {
+          "en": "hsbcnet_mobileapp_egen",
+          "en_u1": "hsbcnet_mobileapp_egen",
+          "ar": "hsbcnet_mobileapp_egar",
+          "default": "hsbcnet_mobileapp_egen"
+        },
+        "FR": {
+          "en": "hsbcnet_mobileapp_fren",
+          "en_u1": "hsbcnet_mobileapp_fren",
+          "fr": "hsbcnet_mobileapp_frfr",
+          "fr_CA": "hsbcnet_mobileapp_frfr",
+          "default": "hsbcnet_mobileapp_fren"
+        },
+        "HK": {
+          "en": "hsbcnet_mobileapp_hken",
+          "en_u1": "hsbcnet_mobileapp_hken",
+          "zh": "hsbcnet_mobileapp_hkcn",
+          "zh_tw": "hsbcnet_mobileapp_hktw",
+          "default": "hsbcnet_mobileapp_hken"
+        },
+        "KW": {
+          "en": "hsbcnet_mobileapp_kwen",
+          "en_u1": "hsbcnet_mobileapp_kwen",
+          "ar": "hsbcnet_mobileapp_kwar",
+          "default": "hsbcnet_mobileapp_kwen"
+        },
+        "MY": {
+          "en": "hsbcnet_mobileapp_myen",
+          "en_u1": "hsbcnet_mobileapp_myen",
+          "default": "hsbcnet_mobileapp_myen"
+        },
+        "NZ": {
+          "en": "hsbcnet_mobileapp_nzen",
+          "en_u1": "hsbcnet_mobileapp_nzen",
+          "default": "hsbcnet_mobileapp_nzen"
+        }
+      },
+      "ppPayment": [
+        {
+          "rtpCtryWithPaymentType": [
+            "HK",
+            "SG",
+            "MY",
+            "PL",
+            "LK",
+            "AE",
+            "US",
+            "TH",
+            "GB"
+          ],
+          "domesticPPCtryArr": [
+            "SG",
+            "MY",
+            "AE",
+            "US",
+            "TH",
+            "GB"
+          ],
+          "bothPPCtryArr": [
+            "HK",
+            "LK"
+          ]
+        }
+      ],
+      "MMSupportCountriesCUS": [
+        "SG",
+        "CN",
+        "CA",
+        "US",
+        "GB",
+        "MX",
+        "BM",
+        "FR",
+        "IN",
+        "ID",
+        "EG",
+        "OM",
+        "AE",
+        "AU",
+        "BD",
+        "JP",
+        "KR",
+        "MO",
+        "CH",
+        "ES",
+        "BR",
+        "PL",
+        "GR",
+        "MY",
+        "MT",
+        "HK",
+        "SA",
+        "MU",
+        "NZ",
+        "LK",
+        "TH",
+        "AM",
+        "PH",
+        "IE",
+        "VN",
+        "AR",
+        "CL",
+        "DZ",
+        "BH",
+        "KW",
+        "QA",
+        "BE",
+        "CZ",
+        "DE",
+        "IL",
+        "IT",
+        "LU",
+        "NL",
+        "RU",
+        "ZA",
+        "TW",
+        "UY"
+      ],
+      "MMSupportCountriesDebit_PP": [
+        "SG",
+        "CN",
+        "CA",
+        "US",
+        "GB",
+        "MX",
+        "BM",
+        "FR",
+        "IN",
+        "ID",
+        "EG",
+        "OM",
+        "AE",
+        "AU",
+        "BD",
+        "JP",
+        "KR",
+        "MO",
+        "CH",
+        "ES",
+        "BR",
+        "PL",
+        "GR",
+        "MY",
+        "MT",
+        "HK",
+        "SA",
+        "MU",
+        "NZ",
+        "LK",
+        "TH",
+        "AM",
+        "PH",
+        "IE",
+        "VN",
+        "AR",
+        "CL",
+        "DZ",
+        "BH",
+        "KW",
+        "QA",
+        "BE",
+        "CZ",
+        "DE",
+        "IL",
+        "IT",
+        "LU",
+        "NL",
+        "RU",
+        "ZA",
+        "TW",
+        "UY",
+        "TR"
+      ],
+      "MMSupportCountriesDebit_IT": [
+        "SG",
+        "CN",
+        "CA",
+        "US",
+        "GB",
+        "MX",
+        "BM",
+        "FR",
+        "IN",
+        "ID",
+        "EG",
+        "OM",
+        "AE",
+        "AU",
+        "BD",
+        "JP",
+        "KR",
+        "MO",
+        "CH",
+        "ES",
+        "BR",
+        "PL",
+        "GR",
+        "MY",
+        "MT",
+        "HK",
+        "SA",
+        "MU",
+        "NZ",
+        "LK",
+        "TH",
+        "AM",
+        "PH",
+        "IE",
+        "VN",
+        "AR",
+        "CL",
+        "DZ",
+        "BH",
+        "KW",
+        "QA",
+        "BE",
+        "CZ",
+        "DE",
+        "IL",
+        "IT",
+        "LU",
+        "NL",
+        "RU",
+        "ZA",
+        "TW",
+        "UY"
+      ],
+      "SEPASupportCountries": [],
+      "SEPASupportDebitAccCountries": [],
+      "enableACHBlocking": false,
+      "enableEGPOPFunction": true,
+      "enableSABBAliasType": true,
+      "ACHSupportCountries": [],
+      "ACHSupportDebitAccCountries": [
+        "US",
+        "GB",
+        "OM",
+        "MX",
+        "CH",
+        "CA",
+        "SA",
+        "AE",
+        "EG",
+        "KW",
+        "DZ",
+        "BH",
+        "QA",
+        "AU",
+        "MY",
+        "CN"
+      ],
+      "BillSupportDebitAccCountries": [
+        "US",
+        "CA",
+        "BH",
+        "LK",
+        "QA",
+        "EG",
+        "AE",
+        "ID"
+      ],
+      "mdaConfig": {
+        "enableMultiUserRegistration": true,
+        "multiUserLimitation": 25,
+        "isEnableMdaDeactive": true
+      },
+      "enableBavCheck": true,
+      "enableAiNewFilter": true,
+      "enableAiNewStyleByBlackList": true,
+      "aiNewStyleBlackList": [
+        "GB"
+      ],
+      "aiNewStyleWhiteList": [
+        "MY",
+        "AU",
+        "SG",
+        "SA",
+        "CA",
+        "IN",
+        "MX",
+        "CN",
+        "FR",
+        "HK"
+      ],
+      "AIConfig": {
+        "localizedCountries": [
+          {
+            "countryCode": "CN",
+            "accountTypes": [
+              "CA",
+              "LN",
+              "TD"
+            ]
+          },
+          {
+            "countryCode": "IN",
+            "accountTypes": [
+              "*"
+            ]
+          }
+        ]
+      },
+      "disableUKCopPh2": false,
+      "enableTradeAuthTT": true,
+      "enableTradeBulkAuthTT": true,
+      "clientPackVersion": "7902",
+      "isActiveForNewCurrency": {
+        "PP": {
+          "SGHBAP": [
+            "KRW",
+            "MYR"
+          ],
+          "SGHBOS": [
+            "KRW",
+            "MYR"
+          ]
+        },
+        "IAT": {
+          "SGHBAP": [
+            "KRW",
+            "MYR"
+          ],
+          "SGHBOS": [
+            "KRW",
+            "MYR"
+          ]
+        }
+      },
+      "disableCARTPMacaddr": false,
+      "enableCaCancellationAuth": true,
+      "enableR78NewCas": false
+    }
+  ],
+  "urlConfig": {
+    "accounts_url": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-accounts-sde3-proxy/v1",
+    "payment_creation_url": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-payments-creation-sde3-proxy/v9",
+    "click_to_call_eAPI_url": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-mobile-clicktocall-sde3-proxy/v9",
+    "mm_eAPI_url": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-payments-sde3-proxy/v9",
+    "lp_endpoint": "https://cmb-dsp-sit.uk.secure.hsbcnet.com/dsp/oauth2/realms/root/realms/sde3_global/authorize",
+    "lp_brand_id": "67770247",
+    "lp_app_install_id": "7425c4ab-578c-484d-b1a9-35c977bd5af8",
+    "t_and_c_url": "/uims/portal/TermsConditions;{jsessionid}?__tncCheck=true&_backToApp=InformationUI16&__nativeApp=true&__uiUplift=true;",
+    "privacy_and_data_protection_url": "/uims/portal/DataProtection;{jsessionid}?__tncCheck=true&_backToApp=InformationUI16&__nativeApp=true&__uiUplift=true;",
+    "condition_of_national_language_use_url": "/uims/portal/NLSConditions;{jsessionid}?__tncCheck=true&_backToApp=InformationUI16&__nativeApp=true&__uiUplift=true;",
+    "important_information_url": "/uims/portal/MobileImportantInformation;{jsessionid}?__tncCheck=true&_backToApp=InformationUI16&__nativeApp=true&__uiUplift=true;",
+    "security_tips_url": "",
+    "end_user_licence_agreement_url": "https://netmobile:MobP8w@www.hkg1vl0077.p2g.netd2.hsbc.com.hk/mobile/mobileApp/eula/EULA_2021/Global/eula_01/{locale}/eula.html?page=read&headerToggle=true&langToggle=true&back=cam10&backToggle=true",
+    "acknowledgement_url": "https://www.secure.hsbcnet.com/uims/static-dl/public/mobile/features/cmb_mobile_cp/Production/content/acknowledgement_ui_16/acknowledgement.html?__tncCheck=true&_backToApp=InformationUI16&__nativeApp=true;",
+    "icp_url": "",
+    "gong_an_url": "",
+    "china_policy_url": "",
+    "mobile_message_url": "https://www.secure.hsbcnet.com/uims/static-dl/public/mobile/features/cmb_mobile_cp/Production/content/MMTermsofUse/R68/{locale}/MMTermsofUse.html?page=read&headerToggle=true&_backToApp=InformationUI16&__nativeApp=true",
+    "pushNotificationUrl": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-mobile-push-notification-sde3-proxy/v1",
+    "fla_eAPI_url": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-file-authorisation-sde3-proxy/v1",
+    "profile_mobile_url": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-profile-mobile-sde3-proxy/v9",
+    "tradeAuth_eAPI_url": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-trade-authorisation-sde3-proxy/v9",
+    "psd2_pisp_url": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-payments-initiative-sde3-proxy/v9",
+    "aem_host": "https://cdn.sde3-c.hsbcnet.com",
+    "privacy_data_protection_url": "https://www.hsbcnet.com/gbm/global-utilities/privacy-data-protection",
+    "aem_content_path": "/pims/static/dtc",
+    "va_endpoint": "https://learningcentremobile.creativevirtual.com/english/"
+  },
+  "modules": [
+    {
+      "personalLogon": [
+        {
+          "type": "web",
+          "offline": 1,
+          "webversion": "HSBCnet.1.5.14",
+          "isLogonFunc": 1,
+          "proxyApiTimeout": 150,
+          "cookiesdomain": ".hsbcnet.com",
+          "label": [
+            {
+              "en": "Log On"
+            }
+          ],
+          "img": "",
+          "weburl": [
+            {
+              "en": "file:///B2N/HSBCnet/MSP_web/HSBCnet/Landing/Landing.html"
+            }
+          ]
+        }
+      ],
+      "absl_web": [
+        {
+          "type": "web",
+          "offline": 0,
+          "label": [
+            {
+              "en": "Find a Branch / ATM"
+            }
+          ],
+          "img": "",
+          "desc": [
+            {
+              "en": "Find out about the latest great offers"
+            }
+          ],
+          "weburl": [
+            {
+              "en": "https://www.personal.hsbc.com.hk/mobile/services/globalABSL/absl/html/absl_view.html?country=HK"
+            }
+          ],
+          "cookiesdomain": ".hsbc.com.hk",
+          "cookies": [
+            {
+              "mobile_support_type": "1"
+            }
+          ]
+        }
+      ],
+      "footer": [
+        {
+          "type": "app",
+          "offline": 1,
+          "label": [
+            {
+              "en": "Information"
+            }
+          ],
+          "links": [
+            {
+              "id": "terms"
+            },
+            {
+              "id": "Privacy"
+            },
+            {
+              "id": "condition"
+            },
+            {
+              "id": "Information"
+            },
+            {
+              "id": "Security"
+            },
+            {
+              "id": "eula"
+            }
+          ],
+          "webtrend": [
+            {
+              "eventPath": "/prelogon/information",
+              "eventDesc": "information",
+              "customData": [
+                {}
+              ]
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "web",
+          "offline": 0,
+          "label": [
+            {
+              "en": "Terms and Conditions of Use"
+            }
+          ],
+          "weburl": [
+            {
+              "en": "https://www.secure.hsbcnet.com/uims/portal/TermsConditions?__tncCheck=true&_backToApp=true&__nativeApp=true"
+            }
+          ],
+          "cookiesdomain": ".hsbcnet.com"
+        }
+      ],
+      "Privacy": [
+        {
+          "type": "web",
+          "offline": 0,
+          "label": [
+            {
+              "en": "Privacy and Data Protection Statement"
+            }
+          ],
+          "weburl": [
+            {
+              "en": "https://www.secure.hsbcnet.com/uims/portal/DataProtection?__tncCheck=true&_backToApp=true&__nativeApp=true"
+            }
+          ],
+          "cookiesdomain": ".hsbcnet.com"
+        }
+      ],
+      "condition": [
+        {
+          "type": "web",
+          "offline": 0,
+          "label": [
+            {
+              "en": "HSBCnet condition of national language use"
+            }
+          ],
+          "weburl": [
+            {
+              "en": "https://www.secure.hsbcnet.com/uims/portal/NLSConditions?__tncCheck=true&_backToApp=true&__nativeApp=true"
+            }
+          ],
+          "cookiesdomain": ".hsbcnet.com"
+        }
+      ],
+      "Information": [
+        {
+          "type": "web",
+          "offline": 0,
+          "label": [
+            {
+              "en": "Important Information"
+            }
+          ],
+          "weburl": [
+            {
+              "en": "https://www.secure.hsbcnet.com/uims/portal/MobileImportantInformation?__tncCheck=true&_backToApp=true&__nativeApp=true"
+            }
+          ],
+          "cookiesdomain": ".hsbcnet.com"
+        }
+      ],
+      "Security": [
+        {
+          "type": "web",
+          "offline": 0,
+          "label": [
+            {
+              "en": "Security Tips"
+            }
+          ],
+          "weburl": [
+            {
+              "en": "https://www.secure.hsbcnet.com/uims/portal/MobileSecurityTips?__tncCheck=true&_backToApp=true&__nativeApp=true"
+            }
+          ],
+          "cookiesdomain": ".hsbcnet.com"
+        }
+      ],
+      "eula": [
+        {
+          "type": "web",
+          "offline": 0,
+          "label": [
+            {
+              "en": "End User Licence Agreement"
+            }
+          ],
+          "weburl": [
+            {
+              "en": "https://www.secure.hsbcnet.com/uims/static-dl/public/mobile/features/cmb_mobile_cp/Production/content/eula_ui_16/en/eula.html?page=read&headerToggle=true&langToggle=true"
+            }
+          ],
+          "cookiesdomain": ".hsbcnet.com"
+        }
+      ]
+    }
+  ],
+  "fingerprintIdEnhancement": {
+    "enableEnhancement": true,
+    "fingerprintIdBlackListDeviceModel": []
+  },
+  "paymentAuthBlockedList": [
+    {
+      "paymentType": "AP",
+      "subPaymentType": "OMWPS",
+      "countryCode": "OM"
+    },
+    {
+      "paymentType": "PP",
+      "subPaymentType": "QAMPSRF",
+      "countryCode": "QA"
+    },
+    {
+      "paymentType": "APC",
+      "subPaymentType": "BlockPandiaACHCN",
+      "countryCode": "CN"
+    },
+    {
+      "paymentType": "PP",
+      "subPaymentType": "BlockPandiaSIPaymentAuth",
+      "countryCode": "BlockPandiaSIPaymentAuth"
+    },
+    {
+      "paymentType": "IT",
+      "subPaymentType": "BlockPandiaSIPaymentAuth",
+      "countryCode": "BlockPandiaSIPaymentAuth"
+    },
+    {
+      "paymentType": "APC",
+      "subPaymentType": "BlockPandiaSIPaymentAuth",
+      "countryCode": "BlockPandiaSIPaymentAuth"
+    },
+    {
+      "paymentType": "BI",
+      "subPaymentType": "BlockATOBDPaymentAuth",
+      "countryCode": "BD"
+    },
+    {
+      "paymentType": "BI",
+      "subPaymentType": "BlockILPaymentAuth",
+      "countryCode": "IL"
+    }
+  ],
+  "transmitPathOverridenids": {
+  },
+  "mrdcConfig": [
+    {
+      "mrdcEnable": true,
+      "manualCaptureIOS": true,
+      "manualCaptureAndroid": true,
+      "autoEntitlemenEnable": true,
+      "mrdcWhiteList": [
+        "CN",
+        "US",
+        "CA",
+        "SG",
+        "IN",
+        "AE",
+        "MX",
+        "SA",
+        "AM",
+        "AU",
+        "BM",
+        "JP",
+        "MT",
+        "PL",
+        "ZA",
+        "CH",
+        "KR",
+        "VN",
+        "BE",
+        "NL",
+        "TH",
+        "KW",
+        "NZ",
+        "QA",
+        "MU",
+        "CL",
+        "LK",
+        "FR",
+        "IE",
+        "IL",
+        "RU",
+        "GB",
+        "CZ",
+        "HK",
+        "DE",
+        "ES",
+        "IT",
+        "ID",
+        "PH",
+        "BH",
+        "MY",
+        "LU",
+        "AR",
+        "DZ",
+        "MO",
+        "EG",
+        "BD",
+        "BR",
+        "OM",
+        "TR",
+        "TW",
+        "UY"
+      ],
+      "mrdcUrl": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-mrdc-sde3-proxy/v9/mrdc/",
+      "mrdcCountry": [
+        {
+          "name": "en",
+          "attribute": [
+            {
+              "termUrl": "https://www.secure.hsbcnet.com/uims/static-dl/public/mobile/features/cmb_mobile_cp/Production/content/mRDC/Terms/en/terms.html"
+            }
+          ]
+        },
+        {
+          "name": "fr_ca",
+          "attribute": [
+            {
+              "termUrl": "https://www.secure.hsbcnet.com/uims/static-dl/public/mobile/features/cmb_mobile_cp/Production/content/mRDC/Terms/fr_ca/terms.html"
+            }
+          ]
+        },
+        {
+          "name": "en_us",
+          "attribute": [
+            {
+              "termUrl": "https://www.secure.hsbcnet.com/uims/static-dl/public/mobile/features/cmb_mobile_cp/Production/content/mRDC/Terms/en_us/terms.html"
+            }
+          ]
+        }
+      ],
+      "locationRestriction": {
+        "US": [
+          "US",
+          "USA",
+          "PR",
+          "PRI",
+          "GU",
+          "GUM",
+          "VI",
+          "VIR",
+          "AS",
+          "ASM",
+          "MP",
+          "MNP",
+          "CA",
+          "CAN"
+        ],
+        "CA": [
+          "CA",
+          "CAN",
+          "US",
+          "USA",
+          "PR",
+          "PRI",
+          "GU",
+          "GUM",
+          "VI",
+          "VIR",
+          "AS",
+          "ASM",
+          "MP",
+          "MNP"
+        ]
+      }
+    }
+  ],
+  "AEMNLSFolderMapping": {
+    "NLS.PAYMENT": "payment",
+    "NLS.TDS": "payment",
+    "NLS.FLA": "payment",
+    "NLS.FINTRAC": "payment",
+    "NLS.COUNTRY_CODE_": "payment",
+    "NLS.BANKIDENTIFIER": "payment",
+    "NLS.RATE": "payment",
+    "NLS.TRADE": "trade",
+    "NLS.CLICK_TO_CALL": "click_to_call",
+    "NLS.PSD2": "payment",
+    "NLS.PREVIEW": "payment"
+  },
+  "QualtricsConfig": {
+    "projectId": "ZN_1FYnZcDdYKv5fdY",
+    "tokenKey": "HSBCnet-Mobile",
+    "token": "1ea0QQojm7uDVVVeBay1cA==]WigDVPoj++PT6wElBRXon9O7IgpsSEv+HIRSRquBbwWGzld7w8uEAq86rl8K04ml",
+    "contactsUrl": "https://fra1.qualtrics.com/API/v3/directories/POOL_3O0rouNliNJAKmY/contacts",
+    "qualtricsUrl": "https://www.qualtrics.com",
+    "initAndroid": false,
+    "initIOS": true
+  },
+  "bfmConfig": [
+    {
+      "bfmEnable": true,
+      "bfmHost": "https://api-dev.uk.hsbcnet.com/cmb-hsbcnet-ic-ea-mobile-bfm-sde3-proxy/v9",
+      "bfmWhiteList": [
+        "MY",
+        "SG",
+        "CA"
+      ],
+      "cashflowCIDWhiteList": [],
+      "spendCIDWhiteList": [
+        "SG",
+        "CA"
+      ],
+      "cashflowWhiteList": [
+        "MY",
+        "SG",
+        "CA"
+      ],
+      "spendWhiteList": [
+        "MY",
+        "SG",
+        "CA"
+      ],
+      "enableExclude": false,
+      "enableSplit": false
+    }
+  ],
+  "demoModeConfig": {
+    "iOS": true,
+    "android": true
+  },
+  "EAST": {
+    "iOS": true,
+    "android": true,
+    "whiteList": [
+      {
+        "customerCountry": "CN",
+        "customerInstitution": {
+          "excludes": [
+            "HASE"
+          ]
+        },
+        "debitAccountCountry": "CN",
+        "debitAccountInstitution": {
+          "excludes": [
+            "HASE"
+          ]
+        }
+      }
+    ]
+  },
+  "captureDeviceIdFLA": {
+    "iOS": true,
+    "android": true,
+    "supportedRegion": [
+      {
+        "customerCountry": "CN",
+        "businessPostalCountry": "CN",
+        "customerInstitution": {
+          "includes": [],
+          "excludes": []
+        },
+        "debitAccountCountry": "CN",
+        "submissionChannel": [
+          "FLU"
+        ]
+      }
+    ]
+  },
+  "fraudReportReason": [
+    {
+      "NLSKey": "TRACKPAYMENT.FRAUD_REPORT_REASON_1",
+      "value": "We were asked for a one time password / code"
+    },
+    {
+      "NLSKey": "TRACKPAYMENT.FRAUD_REPORT_REASON_2",
+      "value": "We were asked to click a link or download software"
+    },
+    {
+      "NLSKey": "TRACKPAYMENT.FRAUD_REPORT_REASON_3",
+      "value": "We received a fraudulent invoice / payment instruction"
+    },
+    {
+      "NLSKey": "TRACKPAYMENT.FRAUD_REPORT_REASON_4",
+      "value": "We received a fraudulent email / call to change account details"
+    },
+    {
+      "NLSKey": "TRACKPAYMENT.FRAUD_REPORT_REASON_5",
+      "value": "Fraud within our organisation"
+    },
+    {
+      "NLSKey": "TRACKPAYMENT.FRAUD_REPORT_REASON_6",
+      "value": "Another kind of fraud"
+    },
+    {
+      "NLSKey": "TRACKPAYMENT.FRAUD_REPORT_REASON_7",
+      "value": "None of the above - Other"
+    }
+  ],
+  "disabledTimers": [],
+  "myAlertConfig": {
+    "upliftEnable": true,
+    "customerManagement": {
+      "isEnable": false
+    },
+    "requestForPayment": {
+      "isEnable": true
+    }
+  },
+  "entitlementConfig": {
+    "enable": true,
+    "entitlements": [
+      {
+        "service": "authorisation",
+        "toolIDs": [],
+        "subServices": [
+          {
+            "service": "digitalFLA",
+            "toolIDs": [
+              "CD016",
+              "CD018",
+              "FLAU01"
+            ],
+            "condition": "and"
+          },
+          {
+            "service": "heritageFLA",
+            "toolIDs": [
+              "CD016"
+            ]
+          },
+          {
+            "service": "requestForPayment",
+            "toolIDs": [
+              "CD437"
+            ]
+          },
+          {
+            "service": "authSummary",
+            "toolIDs": [
+              "CD027",
+              "CD032",
+              "CD034"
+            ]
+          }
+        ]
+      },
+      {
+        "service": "creation",
+        "toolIDs": [
+          "CD027",
+          "CD032",
+          "CD034",
+          "CD036",
+          "CD037",
+          "CD039",
+          "CD040",
+          "CD130",
+          "CD033"
+        ]
+      }
+    ]
+  }
+}

@@ -2,6 +2,9 @@ import webView from '@ohos.web.webview';
 import http from '@ohos.net.http';
 import httpGet from '../common/utils/HttpUtil';
 import promptAction from '@ohos.promptAction'
+import { RequestClient } from '@ohos/networks/Index';
+
+import { AxiosError, AxiosResponse} from '@ohos/axiosforhttpclient'
 
 @Entry
 @Component
@@ -14,14 +17,26 @@ struct EulaPage {
   build() {
     Stack() {
       Column() {
-        Web({ src: this.webSrc, controller: this.controller })
-          .onProgressChange((event) => {
-            if (event?.newProgress == 100) {
-              this.isLoading = false
-            }
+        Flex({
+          direction: FlexDirection.Column
+        }) {
+          Web({ src: this.webSrc, controller: this.controller })
+            .onProgressChange((event) => {
+              if (event?.newProgress == 100) {
+                this.isLoading = false
+              }
+            })
+            .height('90%')
+            .width('100%')
+          Button() {
+            Text('Request')
+          }
+          .onClick(() => {
+            new RequestClient().loadBalance()
           })
-          .height('100%')
+          .height('10%')
           .width('100%')
+        }
       }
       .height('100%')
       .width('100%')

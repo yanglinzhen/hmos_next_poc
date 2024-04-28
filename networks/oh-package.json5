@@ -1,0 +1,14 @@
+{
+  "name": "networks",
+  "version": "1.0.0",
+  "description": "Network module",
+  "main": "Index.ets",
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@ohos/axiosforhttpclient": "^1.0.0-rc.3",
+    "@ohos/axios": "^2.2.0"
+  },
+  "devDependencies": {},
+  "dynamicDependencies": {}
+}
