@@ -238,6 +238,7 @@ axios.defaults.adapter = (config: InternalAxiosRequestConfig) => {
             }
 
             let Builder = new Request.Builder()
+               .followRedirects(true)
                .url(url)
                .method(method);
 

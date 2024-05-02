@@ -1,6 +1,6 @@
 import { axios, AxiosError, AxiosResponse } from '@ohos/axiosforhttpclient'
 
-interface Cam10Body {
+interface LoadBalanceResponse {
   title: string,
   description: string,
 }
@@ -10,33 +10,38 @@ interface PLRequestBody {
   __respType: string
 }
 
+const BASE_URL = 'https://www.secure.hsbcnet.com'
+
+const axiosInstance = axios.create({
+  baseURL: BASE_URL,
+  timeout: 30000,
+})
+
+const loadBalanceResponseTransformer = (data: string) => {
+  const removeScriptTag = (str: string) => str.trim().replace(/<script[^>]*>|<\/script>/g, '');
+  const result = removeScriptTag(data)
+  try {
+    return JSON.parse(result) as LoadBalanceResponse
+  } catch (e) {
+    return {
+      title: "title",
+      body: 'body'
+    }
+  }
+}
+
 export class RequestClient {
   async loadBalance() {
     const params: PLRequestBody = {
       __nativeApp: true,
       __respType: "JSON"
     }
-    axios.create({
-      baseURL: 'https://www.secure.hsbcnet.com',
-      timeout: 30000,
-    })
-      .get<string, AxiosResponse<Cam10Body>, PLRequestBody>('/uims/portal/IDV_CAM10_AUTHENTICATION',
-        {
-          params: params,
-          responseType: 'string',
-          transformResponse: (data: string) => {
-            const removeScriptTag = (str: string) => str.trim().replace(/<script[^>]*>|<\/script>/g, '');
-            const result = removeScriptTag(data)
-            try {
-              return JSON.parse(result) as Cam10Body
-            } catch (e) {
-              return {
-                title: "title",
-                body: 'body'
-              }
-            }
-          },
-        }).then((res: AxiosResponse<Cam10Body>) => {
+    axiosInstance.get<string, AxiosResponse<LoadBalanceResponse>, PLRequestBody>('/uims/portal/IDV_CAM10_AUTHENTICATION',
+      {
+        params: params,
+        responseType: 'string',
+        transformResponse: loadBalanceResponseTransformer,
+      }).then((res: AxiosResponse<LoadBalanceResponse>) => {
       console.log(JSON.stringify(res))
     }).catch((err: AxiosError) => {
       console.log(JSON.stringify(err))
