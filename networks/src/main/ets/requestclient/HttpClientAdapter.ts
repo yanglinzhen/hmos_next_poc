@@ -134,7 +134,7 @@ import {
 import fs from '@ohos.file.fs';
 
 const TAG: string = "HttpClientAdapter";
-axios.defaults.adapter = (config: InternalAxiosRequestConfig) => {
+export const HttpClientAdapter = (config: InternalAxiosRequestConfig) => {
    return new Promise(async (resolve, reject) => {
       if (config.data && config.context
          && config.data instanceof FormData
@@ -238,7 +238,6 @@ axios.defaults.adapter = (config: InternalAxiosRequestConfig) => {
             }
 
             let Builder = new Request.Builder()
-               .followRedirects(true)
                .url(url)
                .method(method);
 

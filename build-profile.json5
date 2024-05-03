@@ -35,6 +35,10 @@
     {
       "name": "networks",
       "srcPath": "./networks"
+    },
+    {
+      "name": "commonLib",
+      "srcPath": "./commonLib"
     }
   ]
 }

@@ -3,8 +3,8 @@ import http from '@ohos.net.http';
 import httpGet from '../common/utils/HttpUtil';
 import promptAction from '@ohos.promptAction'
 import { RequestClient } from '@ohos/networks/Index';
-
-import { AxiosError, AxiosResponse} from '@ohos/axiosforhttpclient'
+import { ChecksumUtils } from '@ohos/networks/Index';
+import { FileUtils } from '@ohos/commonLib/Index';
 
 @Entry
 @Component
@@ -32,9 +32,25 @@ struct EulaPage {
             Text('Request')
           }
           .onClick(() => {
+
+            // new FileUtils().getFileObject('checksum.json', getContext()).then((result) => {
+            //   console.log(JSON.stringify(result['root']));
+            // }).catch((error: Error) => {
+            //   console.log(JSON.stringify(error));
+            // })
+
             new RequestClient().loadBalance()
           })
-          .height('10%')
+          .height('5%')
+          .width('100%')
+
+          Button() {
+            Text('Request CDN')
+          }
+          .onClick(() => {
+            new RequestClient().getChecksums()
+          })
+          .height('5%')
           .width('100%')
         }
       }
