@@ -1,6 +1,6 @@
-import { axios, AxiosError, AxiosInstance, AxiosResponse } from '../HttpClientAdapter'
+import { axios, AxiosResponse } from '../HttpClientAdapter'
 
-import { convertXmlToObject, Entity, getEntityList } from '@ohos/commonLib/src/main/ets/utils/XmlUtils';
+import { Entity, getEntityList } from '@ohos/commonLib/src/main/ets/viewmodel/Entity';
 
 export type ChecksumResponse = object
 
@@ -59,11 +59,7 @@ export class CdnApi {
   }
 
   entityListTransformer = (data: string) => {
-
-    const xmlObj = convertXmlToObject(data)
-
-    const entityList = getEntityList(xmlObj)
-
+    const entityList = getEntityList(data)
     try {
       return entityList
     } catch (e) {
