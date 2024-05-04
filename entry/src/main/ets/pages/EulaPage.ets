@@ -11,7 +11,10 @@ import {
   LoadBalanceResponse,
   PlApi
 } from '@ohos/networks/src/main/ets/requestclient/api/PlApi';
-import { CdnApi, HOST_CDN } from '@ohos/networks/src/main/ets/requestclient/api/CdnApi';
+
+import { CdnApi } from '@ohos/networks/src/main/ets/requestclient/api/CdnApi'
+import { Entity } from '@ohos/commonLib/Index';
+import { ListPickerDialog, DialogStruct } from '../components/ListPickerDialog'
 
 
 @Entry
@@ -21,6 +24,15 @@ struct EulaPage {
   @State message: string = 'Eula page';
   @State webSrc: string = 'https://www.cn.secure.hsbcnet.com/uims/static-dl/public/mobile/features/cmb_mobile_cp/Production/content/China/eula_11/zh_zh/eula.html?page=read&langToggle=true&headerToggle=true&backToggle=false'
   @State isLoading: boolean = true;
+  @State entityList?: Entity[] = undefined
+  dialogController: CustomDialogController = new CustomDialogController({
+    builder: ListPickerDialog({
+      data: $entityList,
+      onSelectItem: (url: string) => {
+        console.log(url)
+      }
+    })
+  })
 
   build() {
     Stack() {
@@ -59,12 +71,16 @@ struct EulaPage {
           .width('100%')
 
           Button() {
-            Text('Request CDN')
+            Text('Request Entity')
           }
           .onClick(async () => {
-            new CdnApi().getChecksums()
-              .then((result: AxiosResponse<ChecksumResponse>) => {
-                console.log(JSON.stringify(result.data));
+
+            new CdnApi().fetchEntityList()
+              .then((result: AxiosResponse<Entity[]>) => {
+                if (result.data.length > 1) {
+                  this.entityList = result.data
+                  this.dialogController.open()
+                }
               })
               .catch((error: Error) => {
                 console.log(JSON.stringify(error));

@@ -1,5 +1,7 @@
 import { axios, AxiosError, AxiosInstance, AxiosResponse } from '../HttpClientAdapter'
 
+import { convertXmlToObject, Entity, getEntityList } from '@ohos/commonLib/src/main/ets/utils/XmlUtils';
+
 export type ChecksumResponse = object
 
 export const HOST_CDN = "https://cdn.hsbcnet.com"
@@ -57,10 +59,13 @@ export class CdnApi {
   }
 
   entityListTransformer = (data: string) => {
-    const removeScriptTag = (str: string) => str.trim().replace(/<script[^>]*>|<\/script>/g, '');
-    const result = removeScriptTag(data)
+
+    const xmlObj = convertXmlToObject(data)
+
+    const entityList = getEntityList(xmlObj)
+
     try {
-      return JSON.parse(result) as ChecksumResponse
+      return entityList
     } catch (e) {
       throw e as Error
     }
@@ -78,8 +83,8 @@ export class CdnApi {
       })
   }
 
-  getEntityList() {
-    return this.axiosCdn.get<string, AxiosResponse<ChecksumResponse>, null>(
+  fetchEntityList() {
+    return this.axiosCdn.get<string, AxiosResponse<Entity[]>, null>(
       this.urlConfig.entityListPath,
       {
         responseType: 'string',
