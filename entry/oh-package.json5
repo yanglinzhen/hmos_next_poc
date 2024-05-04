@@ -6,6 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
+    "base64-js": "^1.5.1",
     "@ohos/networks": "file:../networks",
     "@ohos/commonLib": "file:../commonLib",
     "@ohos/axiosforhttpclient": "^1.0.0-rc.3"

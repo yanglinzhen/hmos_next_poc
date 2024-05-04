@@ -2,9 +2,17 @@ import webView from '@ohos.web.webview';
 import http from '@ohos.net.http';
 import httpGet from '../common/utils/HttpUtil';
 import promptAction from '@ohos.promptAction'
-import { RequestClient } from '@ohos/networks/Index';
-import { ChecksumUtils } from '@ohos/networks/Index';
-import { FileUtils } from '@ohos/commonLib/Index';
+import { AxiosError, RequestClient } from '@ohos/networks/Index';
+import { Get } from '@ohos/networks/src/main/ets/requestclient/RequestClient';
+import { axios, AxiosResponse, Logger, StringUtil, X509TrustManager } from '@ohos/axiosforhttpclient'
+import {
+  ChecksumResponse,
+  HOST_PL,
+  LoadBalanceResponse,
+  PlApi
+} from '@ohos/networks/src/main/ets/requestclient/api/PlApi';
+import { CdnApi, HOST_CDN } from '@ohos/networks/src/main/ets/requestclient/api/CdnApi';
+
 
 @Entry
 @Component
@@ -39,7 +47,13 @@ struct EulaPage {
             //   console.log(JSON.stringify(error));
             // })
 
-            new RequestClient().loadBalance()
+            (new RequestClient().getAxios(HOST_PL) as PlApi).loadBalance()
+              .then((result: AxiosResponse<LoadBalanceResponse>) => {
+                console.log(JSON.stringify(result.data));
+              })
+              .catch((error: Error) => {
+                console.log(JSON.stringify(error));
+              })
           })
           .height('5%')
           .width('100%')
@@ -47,8 +61,14 @@ struct EulaPage {
           Button() {
             Text('Request CDN')
           }
-          .onClick(() => {
-            new RequestClient().getChecksums()
+          .onClick(async () => {
+            new CdnApi().getChecksums()
+              .then((result: AxiosResponse<ChecksumResponse>) => {
+                console.log(JSON.stringify(result.data));
+              })
+              .catch((error: Error) => {
+                console.log(JSON.stringify(error));
+              })
           })
           .height('5%')
           .width('100%')
@@ -82,3 +102,4 @@ struct EulaPage {
     }
   }
 }
+

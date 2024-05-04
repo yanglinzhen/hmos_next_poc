@@ -5,42 +5,41 @@
         "domains": [
           {
             "include-subdomains": true,
-            "name": "secure.hsbcnet.com"
+            "name": "secure.hsbcnet.com",
+            "pin": [
+              {
+                "digest-algorithm": "sha256",
+                "digest": "lxcEaNEU0Vo9GV3cAavXFftmO9WjvfNS+9mtEd6vFVA="
+              },
+              {
+                "digest-algorithm": "sha256",
+                "digest": "RRM1dGqnDFsCJXBTHky16vi1obOlCgFFn/yOhI/y+ho="
+              },
+              {
+                "digest-algorithm": "sha256",
+                "digest": "WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="
+              }
+            ]
           },
           {
             "include-subdomains": true,
-            "name": "cdn.hsbcnet.com"
+            "name": "cdn.hsbcnet.com",
+            "pin": [
+              {
+                "digest-algorithm": "sha256",
+                "digest": "REsUE014yOYFRRpzaad4i0AceBbTVngRR2lGv0WyMwA="
+              },
+              {
+                "digest-algorithm": "sha256",
+                "digest": "RRM1dGqnDFsCJXBTHky16vi1obOlCgFFn/yOhI/y+ho="
+              },
+              {
+                "digest-algorithm": "sha256",
+                "digest": "WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="
+              }
+            ]
           }
-        ],
-        "pin-set": {
-          "expiration": "2034-8-6",
-          "pin": [
-            {
-              "digest-algorithm": "sha256",
-              "digest": "lxcEaNEU0Vo9GV3cAavXFftmO9WjvfNS+9mtEd6vFVA="
-            },
-            {
-              "digest-algorithm": "sha256",
-              "digest": "RRM1dGqnDFsCJXBTHky16vi1obOlCgFFn/yOhI/y+ho="
-            },
-            {
-              "digest-algorithm": "sha256",
-              "digest": "WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="
-            },
-            {
-              "digest-algorithm": "sha256",
-              "digest": "REsUE014yOYFRRpzaad4i0AceBbTVngRR2lGv0WyMwA="
-            },
-            {
-              "digest-algorithm": "sha256",
-              "digest": "RRM1dGqnDFsCJXBTHky16vi1obOlCgFFn/yOhI/y+ho="
-            },
-            {
-              "digest-algorithm": "sha256",
-              "digest": "WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="
-            }
-          ]
-        }
+        ]
       }
     ]
   }

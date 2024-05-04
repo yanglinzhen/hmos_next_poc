@@ -314,20 +314,21 @@ export const HttpClientAdapter = (config: InternalAxiosRequestConfig) => {
                   return prev + String.fromCharCode(cur);
                }, '')
                const jsonData = JSON.parse(jsonString)['network-security-config']['domain-config'][0];
-               const hostnames = jsonData.domains.reduce((prev, cur) => {
-                  prev.push(cur.name);
-                  return prev;
-               }, [])
-               const pins = jsonData['pin-set'].pin.reduce((prev, cur) => {
-                  prev.push(`${cur['digest-algorithm']}/${cur.digest}`)
-                  return prev;
-               }, [])
-               if (hostnames.length !== 0 && pins.length !== 0) {
+               const hostnames = jsonData.domains
+               if (hostnames.length !== 0) {
                   Logger.debug('HOSTNAMES:' + hostnames[0]);
-                  Logger.debug('PINS:' + pins[0]);
                   let certPinBuild = new CertificatePinnerBuilder();
                   for (let i = 0; i < hostnames.length; i++) {
-                     certPinBuild = certPinBuild.add(hostnames[i], pins[i]);
+                     const hostnameObj = hostnames[i]
+                     const pins = hostnameObj.pin.reduce((prev, cur) => {
+                        prev.push(`${cur['digest-algorithm']}/${cur.digest}`)
+                        return prev;
+                     }, [])
+                     const name = hostnameObj.name
+                     for (let j = 0; j < pins.length; j++) {
+                        const pin = pins[j]
+                        certPinBuild = certPinBuild.add(name, pin);
+                     }
                   }
                   const certificatePinner = certPinBuild.build();
                   HttpCall = HttpCall.setCertificatePinner(certificatePinner);
