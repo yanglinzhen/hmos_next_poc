@@ -6,7 +6,8 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "@ohos/xml_js": "^1.0.2"
+    "@ohos/xml_js": "^1.0.2",
+    "@ohos/networks": "file:../networks",
   },
   "devDependencies": {},
   "dynamicDependencies": {}

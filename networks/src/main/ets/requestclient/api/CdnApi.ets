@@ -1,6 +1,5 @@
-import { axios, AxiosResponse } from '../HttpClientAdapter'
+import { axios, AxiosInstance, AxiosProgressEvent, AxiosResponse } from '../HttpClientAdapter'
 
-import { Entity, getEntityList } from '@ohos/commonLib/src/main/ets/viewmodel/Entity';
 
 export type ChecksumResponse = object
 
@@ -41,50 +40,42 @@ class ProdConfig implements UrlConfig {
 }
 
 export class CdnApi {
-  urlConfig: UrlConfig = new DebugConfig()
+  urlConfig: UrlConfig
+  axiosCdn: AxiosInstance
 
-  axiosCdn = axios.create({
-    baseURL: this.urlConfig.baseUrl,
-    timeout: 30000
-  })
-
-  configObjectTransformer = (data: string) => {
-    const removeScriptTag = (str: string) => str.trim().replace(/<script[^>]*>|<\/script>/g, '');
-    const result = removeScriptTag(data)
-    try {
-      return JSON.parse(result) as ChecksumResponse
-    } catch (e) {
-      throw e as Error
-    }
+  constructor(urlConfig: UrlConfig = new DebugConfig()) {
+    this.urlConfig = urlConfig
+    this.axiosCdn = axios.create({
+      baseURL: this.urlConfig.baseUrl,
+      timeout: 30000
+    })
   }
 
-  entityListTransformer = (data: string) => {
-    const entityList = getEntityList(data)
-    try {
-      return entityList
-    } catch (e) {
-      throw e as Error
-    }
-  }
-
-  getChecksums() {
-    return this.axiosCdn.get<string, AxiosResponse<ChecksumResponse>, null>(
-      this.urlConfig.checksumPath,
+  getConfig<T>(url: string, transformer: (data: string) => T) {
+    return this.axiosCdn.get<string, AxiosResponse<T>, null>(
+      url,
       {
         responseType: 'string',
-        transformResponse: this.configObjectTransformer,
-        // sslCertificateManager: new SslCertificate(),
-        // caPath: 'hsbcnet_cert/cdn.hsbcnet.com.crt',
-        // context: getContext(this),
+        transformResponse: transformer,
       })
   }
 
-  fetchEntityList() {
-    return this.axiosCdn.get<string, AxiosResponse<Entity[]>, null>(
+  downloadFile(url: string, filePath: string, downloadProgress: (progressEvent: AxiosProgressEvent) => void) {
+    return this.axiosCdn.get<string, AxiosResponse<string>, null>(
+      url, {
+        headers: { 'Content-Type': 'application/zip' },
+        context: getContext(this),
+        filePath: filePath,
+        onDownloadProgress: downloadProgress
+      })
+  }
+
+  fetchEntityList<T>(transformer: (data: string) => T) {
+    return this.axiosCdn.get<string, AxiosResponse<T>, null>(
       this.urlConfig.entityListPath,
       {
         responseType: 'string',
-        transformResponse: this.entityListTransformer,
+        transformResponse: transformer,
       })
   }
 }

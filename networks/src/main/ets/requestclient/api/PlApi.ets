@@ -1,13 +1,33 @@
 import { axios, AxiosError, AxiosInstance, AxiosResponse } from '../HttpClientAdapter'
-export type ChecksumResponse = object
 
+interface UrlConfig {
+  baseUrl: string
+  loadBalancePath: string
+}
 
-export const HOST_PL = "https://www.secure.hsbcnet.com"
+class DebugConfig implements UrlConfig {
+  baseUrl: string
+  loadBalancePath: string
 
-const axiosPl = axios.create({
-  baseURL: HOST_PL,
-  timeout: 30000
-})
+  constructor(baseUrl: string = "https://www.sde3-c.uk.hsbcnet.com",
+              loadBalancePath: string = '/uims/portal/IDV_CAM10_AUTHENTICATION',
+  ) {
+    this.baseUrl = baseUrl
+    this.loadBalancePath = loadBalancePath
+  }
+}
+
+class ProdConfig implements UrlConfig {
+  baseUrl: string
+  loadBalancePath: string
+
+  constructor(baseUrl: string = "https://www.secure.hsbcnet.com",
+              loadBalancePath: string = '/uims/portal/IDV_CAM10_AUTHENTICATION',
+  ) {
+    this.baseUrl = baseUrl
+    this.loadBalancePath = loadBalancePath
+  }
+}
 
 
 export interface LoadBalanceResponse {
@@ -21,6 +41,17 @@ interface PLRequestBody {
 }
 
 export class PlApi {
+  urlConfig: UrlConfig
+  axiosPl: AxiosInstance
+
+  //constructor
+  constructor(urlConfig: UrlConfig = new DebugConfig()) {
+    this.urlConfig = urlConfig
+    this.axiosPl = axios.create({
+      baseURL: urlConfig.baseUrl,
+      timeout: 30000
+    })
+  }
 
   loadBalanceResponseTransformer = (data: string) => {
     console.info('RequestClient -->:', 'loadBalanceResponseTransformer: -->' + data)
@@ -38,7 +69,7 @@ export class PlApi {
       __nativeApp: true,
       __respType: "JSON"
     }
-    return axiosPl.get<string, AxiosResponse<LoadBalanceResponse>, PLRequestBody>('/uims/portal/IDV_CAM10_AUTHENTICATION',
+    return this.axiosPl.get<string, AxiosResponse<LoadBalanceResponse>, PLRequestBody>(this.urlConfig.loadBalancePath,
       {
         params: params,
         responseType: 'string',

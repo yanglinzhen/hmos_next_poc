@@ -1,3 +1,5 @@
+import { CdnApi } from '@ohos/networks/src/main/ets/requestclient/api/CdnApi';
+import { AxiosResponse } from '@ohos/networks/src/main/ets/requestclient/HttpClientAdapter';
 import { convertXmlToObject } from '../utils/XmlUtils'
 
 export interface Entity {
@@ -15,21 +17,33 @@ export interface Localised {
   default: boolean;
 }
 
-export function getEntityList(
+export async function getEntityList(): Promise<AxiosResponse<Entity[]>> {
+  const transformer = (data: string) => {
+    const entityList = xmlStringToEntityList(data)
+    try {
+      return entityList
+    } catch (e) {
+      throw e as Error
+    }
+  }
+  return new CdnApi().fetchEntityList<Entity[]>(transformer)
+}
+
+function xmlStringToEntityList(
   xmlString: string
 ) {
   const xml = convertXmlToObject(xmlString)
   return convertXmlToEntityList(xml)
 }
 
-export function convertXmlToEntityList(
+function convertXmlToEntityList(
   xml: object
 ): Entity[] {
   const entities: Entity[] = (xml['entityList']['entity'] as object[]).map((entityObj: object) => {
     const entity: Entity = {
       id: entityObj['_attributes']['id'],
       supportedDevices: (entityObj['supportedDevices']['device'] as object[]).map((item) => {
-        return item['_attributes']['name']
+        return item['_attributes']['name'] as string
       }),
       supportedSSLPinning: (entityObj['supportedSSLPinning']['enable']['_text'] == 'true') as boolean,
       localised: {
@@ -43,4 +57,8 @@ export function convertXmlToEntityList(
     return entity
   })
   return entities
+}
+
+export async function downloadEntityFile() {
+
 }

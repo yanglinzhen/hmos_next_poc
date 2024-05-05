@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Entity } from '@ohos/commonLib/Index'
+import { Entity } from '@ohos/commonLib/src/main/ets/viewmodel/Entity'
 
 export interface DialogStruct {
   title: string,

@@ -2,20 +2,13 @@ import webView from '@ohos.web.webview';
 import http from '@ohos.net.http';
 import httpGet from '../common/utils/HttpUtil';
 import promptAction from '@ohos.promptAction'
-import { AxiosError, RequestClient } from '@ohos/networks/Index';
-import { Get } from '@ohos/networks/src/main/ets/requestclient/RequestClient';
 import { axios, AxiosResponse, Logger, StringUtil, X509TrustManager } from '@ohos/axiosforhttpclient'
-import {
-  ChecksumResponse,
-  HOST_PL,
-  LoadBalanceResponse,
-  PlApi
-} from '@ohos/networks/src/main/ets/requestclient/api/PlApi';
+import { LoadBalanceResponse, PlApi } from '@ohos/networks/src/main/ets/requestclient/api/PlApi';
 
-import { CdnApi } from '@ohos/networks/src/main/ets/requestclient/api/CdnApi'
-import { Entity } from '@ohos/commonLib/Index';
+import { getEntityList, Entity } from '@ohos/commonLib/src/main/ets/viewmodel/Entity'
 import { ListPickerDialog, DialogStruct } from '../components/ListPickerDialog'
-
+import { LocalDataManager } from '@ohos/commonLib/Index';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 @Entry
 @Component
@@ -29,10 +22,17 @@ struct EulaPage {
     builder: ListPickerDialog({
       data: $entityList,
       onSelectItem: (url: string) => {
-        console.log(url)
+        this.selectEntity(url)
       }
     })
   })
+
+  async selectEntity(url: string) {
+    const entity: Entity | undefined = this.entityList?.find((entity) => entity.configUrl === url)
+    if (entity) {
+      await LocalDataManager.instance().selectedEntity(entity)
+    }
+  }
 
   build() {
     Stack() {
@@ -53,18 +53,12 @@ struct EulaPage {
           }
           .onClick(() => {
 
-            // new FileUtils().getFileObject('checksum.json', getContext()).then((result) => {
-            //   console.log(JSON.stringify(result['root']));
-            // }).catch((error: Error) => {
-            //   console.log(JSON.stringify(error));
-            // })
-
-            (new RequestClient().getAxios(HOST_PL) as PlApi).loadBalance()
+            new PlApi().loadBalance()
               .then((result: AxiosResponse<LoadBalanceResponse>) => {
-                console.log(JSON.stringify(result.data));
+                hilog.info(0x0088, 'EulaPage', '%{public}s', JSON.stringify(result.data))
               })
               .catch((error: Error) => {
-                console.log(JSON.stringify(error));
+                hilog.info(0x0088, 'EulaPage', '%{public}s', JSON.stringify(error));
               })
           })
           .height('5%')
@@ -75,7 +69,7 @@ struct EulaPage {
           }
           .onClick(async () => {
 
-            new CdnApi().fetchEntityList()
+            getEntityList()
               .then((result: AxiosResponse<Entity[]>) => {
                 if (result.data.length > 1) {
                   this.entityList = result.data
@@ -83,7 +77,7 @@ struct EulaPage {
                 }
               })
               .catch((error: Error) => {
-                console.log(JSON.stringify(error));
+                hilog.info(0x0088, 'EulaPage', '%{public}s', JSON.stringify(error));
               })
           })
           .height('5%')
