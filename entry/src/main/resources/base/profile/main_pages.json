@@ -4,6 +4,7 @@
     "pages/AgreementPage",
     "pages/PrivacyPage",
     "pages/DetailPage",
-    "pages/EulaPage"
+    "pages/EulaPage",
+    "pages/UserNamePage"
   ]
 }

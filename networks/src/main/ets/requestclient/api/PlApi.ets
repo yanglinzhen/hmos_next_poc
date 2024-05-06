@@ -1,7 +1,7 @@
 import { SslCertificate } from '../certificates/SSLPinningCertificate'
 import { axios, AxiosError, AxiosInstance, AxiosResponse } from '../HttpClientAdapter'
 
-interface UrlConfig {
+export interface UrlConfig {
   baseUrl: string
   loadBalancePath: string
 }
@@ -75,6 +75,31 @@ export class PlApi {
         params: params,
         responseType: 'string',
         transformResponse: this.loadBalanceResponseTransformer,
+        // sslCertificateManager: new SslCertificate(),
+        // caPath: 'hsbcnet_cert/www.secure.hsbcnet.com.crt',
+        context: getContext(this),
+      })
+  }
+
+
+
+  userNameValidation = (username: string) => {
+    return this.axiosPl.post<string, AxiosResponse<string>, object>(this.urlConfig.loadBalancePath,
+      {
+        data: {
+          idv_cmd: 'idv.Authentication',
+          initialAccess: true,
+          action: 'continue',
+          cookieuserid: false,
+          nextPage: 'HSBCnet/Landing',
+          userid: username,
+          __nativeApp: true,
+          __respType: "JSON"
+        },
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        },
+        // transformResponse: this.loadBalanceResponseTransformer,
         // sslCertificateManager: new SslCertificate(),
         // caPath: 'hsbcnet_cert/www.secure.hsbcnet.com.crt',
         context: getContext(this),

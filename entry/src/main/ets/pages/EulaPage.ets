@@ -2,14 +2,13 @@ import webView from '@ohos.web.webview';
 import http from '@ohos.net.http';
 import httpGet from '../common/utils/HttpUtil';
 import promptAction from '@ohos.promptAction'
-import { axios, AxiosResponse, Logger, StringUtil, X509TrustManager } from '@ohos/axiosforhttpclient'
-import { LoadBalanceResponse, PlApi } from '@ohos/networks/src/main/ets/requestclient/api/PlApi';
+import { AxiosResponse } from '@ohos/axiosforhttpclient'
 
 import { getEntityList, Entity } from '@ohos/commonLib/src/main/ets/viewmodel/Entity'
-import { ListPickerDialog, DialogStruct } from '../components/ListPickerDialog'
+import { ListPickerDialog } from '../components/ListPickerDialog'
 import { LocalDataManager } from '@ohos/commonLib/Index';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-
+import router from '@ohos.router'
 import { LoadingSpinner } from '../view/LoadingSpinner'
 
 @Entry
@@ -24,7 +23,12 @@ struct EulaPage {
     builder: ListPickerDialog({
       data: $entityList,
       onSelectItem: (url: string) => {
-        this.selectEntity(url)
+        this.loadAction(async () => {
+          await this.selectEntity(url)
+          router.pushUrl({
+            url: 'pages/UserNamePage'
+          })
+        })
       }
     })
   })
@@ -58,42 +62,44 @@ struct EulaPage {
                 this.isLoading = false
               }
             })
-            .height('90%')
             .width('100%')
+          // Button() {
+          //   Text('Request')
+          // }
+          // .onClick(() => {
+          //   this.loadAction(() => {
+          //     new PlApi().loadBalance()
+          //       .then((result: AxiosResponse<LoadBalanceResponse>) => {
+          //         this.loadAction()
+          //       })
+          //       .catch((error: Error) => {
+          //         this.loadAction()
+          //       })
+          //   })
+          // })
+          // .height('5%')
+          // .width('100%')
+
           Button() {
-            Text('Request')
+            Text('Accept Eula')
           }
           .onClick(() => {
             this.loadAction(() => {
-              new PlApi().loadBalance()
-                .then((result: AxiosResponse<LoadBalanceResponse>) => {
+              getEntityList()
+                .then((result: AxiosResponse<Entity[]>) => {
+                  if (result.data.length > 1) {
+                    this.entityList = result.data
+                    this.dialogController.open()
+                  }
                   this.loadAction()
                 })
                 .catch((error: Error) => {
-                  this.loadAction()
+                  hilog.info(0x0088, 'EulaPage', '%{public}s', JSON.stringify(error));
                 })
             })
           })
-          .height('5%')
-          .width('100%')
-
-          Button() {
-            Text('Request Entity')
-          }
-          .onClick(async () => {
-
-            getEntityList()
-              .then((result: AxiosResponse<Entity[]>) => {
-                if (result.data.length > 1) {
-                  this.entityList = result.data
-                  this.dialogController.open()
-                }
-              })
-              .catch((error: Error) => {
-                hilog.info(0x0088, 'EulaPage', '%{public}s', JSON.stringify(error));
-              })
-          })
-          .height('5%')
+          .flexShrink(1)
+          .height('36vp')
           .width('100%')
         }
       }

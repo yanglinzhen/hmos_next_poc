@@ -19,9 +19,12 @@ import { CdnApi } from '@ohos/networks/src/main/ets/requestclient/api/CdnApi';
 import { AxiosError, AxiosProgressEvent, AxiosResponse } from '@ohos/networks/Index';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { ClientpackConfig, ZipFile } from '../viewmodel/ClientpackConfig'
+import { PlApi, UrlConfig } from '@ohos/networks/src/main/ets/requestclient/api/PlApi';
+import { getUrlAndAuthHeader, getUrlPath } from '@ohos/networks/src/main/ets/requestclient/api/UrlUtils'
 
 export class LocalDataManager {
   private static localDataManager: LocalDataManager;
+  private selectedConfig?: ClientpackConfig
 
   private constructor() {
     // this.initDefaultShopCartData();
@@ -38,27 +41,37 @@ export class LocalDataManager {
   async downloadZipFile(dirPath: string, zipFile: ZipFile) {
     hilog.info(0x0000, 'LocalDataManager', 'start download %{public}s', zipFile.zipurl)
     const filePath = new FsUtils().createEntityPath(dirPath, zipFile)
-    new CdnApi().downloadFile(zipFile.zipurl, filePath, (e: AxiosProgressEvent) => {
-      }).then((res: AxiosResponse<string>) => {
-        hilog.info(0x0000, 'LocalDataManager', 'finished download %{public}s finished', zipFile.zipurl)
-      })
-        .catch((err: AxiosError) => {
-          hilog.info(0x0000, 'LocalDataManager', '%{public}s', JSON.stringify(err))
-        })
+    const result: string = (await new CdnApi().downloadFile(zipFile.zipurl, filePath, (e: AxiosProgressEvent) => {
+    }) as AxiosResponse<string>).data
+    return result
   }
 
   async selectedEntity(entity: Entity) {
-    const entityUrl = url.URL.parseURL(entity.configUrl)
-    const dirPath = entity.localised.name + '/' + entity.id
-    await new CdnApi().getConfig<ClientpackConfig>(entity.configUrl, (data: string) => {
+    const dirPath = `${entity.localised.name}/${entity.id}`
+    const config = (await new CdnApi().getConfig<ClientpackConfig>(entity.configUrl, (data: string) => {
       return ClientpackConfig.convertConfigFromResponse(data) as ClientpackConfig
-    }).then((res: AxiosResponse<ClientpackConfig>) => {
-      (res.data as ClientpackConfig).zipFiles().map((zipFile: ZipFile) => {
-        this.downloadZipFile(dirPath, zipFile)
-      })
+    }) as AxiosResponse<ClientpackConfig>).data
+
+    this.selectedConfig = config
+    this.selectedConfig.zipFiles().map((zipFile: ZipFile): Promise<string> => {
+      return this.downloadZipFile(dirPath, zipFile)
     })
-      .catch((err: AxiosError) => {
-        hilog.info(0x0000, 'LocalDataManager', '%{public}s', JSON.stringify(err))
-      })
+  }
+
+  private getPlApiConfig(): UrlConfig {
+    const urlAndAuth = getUrlAndAuthHeader(this.selectedConfig?.host() || '')
+    return {
+      baseUrl: urlAndAuth.url,
+      loadBalancePath: '/uims/portal/IDV_CAM10_AUTHENTICATION'
+    }
+  }
+
+  private plApi?: PlApi
+
+  getPlApi(): PlApi {
+    if (!this.plApi) {
+      this.plApi = new PlApi(this.getPlApiConfig())
+    }
+    return this.plApi
   }
 }
