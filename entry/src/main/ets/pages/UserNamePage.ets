@@ -1,6 +1,7 @@
 import { AxiosError, AxiosResponse } from '@ohos/axiosforhttpclient';
 import { LocalDataManager } from '@ohos/commonLib/Index';
 import { LoadingSpinner } from '../view/LoadingSpinner'
+import { ButtonPositive } from '../components/ButtonPositive'
 
 @Preview
 @Entry
@@ -39,26 +40,28 @@ struct UserNamePage {
               this.usernameText = text
             })
 
-          Button() {
-            Text('Continue')
-          }
-          .onClick(() => {
-            this.loadAction(() => {
-              LocalDataManager.instance()
-                .getPlApi()
-                .userNameValidation(this.usernameText)
-                .then((res: AxiosResponse<string>) => {
-                  console.log(JSON.stringify(res))
-                  this.loadAction()
-                })
-                .catch((err: AxiosError) => {
-                  console.log(JSON.stringify(err))
-                  this.loadAction()
-                })
-            })
-          })
-          .height('5%')
-          .width('100%')
+          ButtonPositive(
+            {
+              text: 'Continue',
+              // onClickEvent: () => {
+              //   this.loadAction(() => {
+              //     LocalDataManager.instance()
+              //       .getPlApi()
+              //       .userNameValidation(this.usernameText)
+              //       .then((res: AxiosResponse<string>) => {
+              //         console.log(JSON.stringify(res))
+              //         this.loadAction()
+              //       })
+              //       .catch((err: AxiosError) => {
+              //         console.log(JSON.stringify(err))
+              //         this.loadAction()
+              //       })
+              //   })
+              // }
+            }
+          )
+            .width('100%')
+            .padding({ left: '5vp', right: '5vp' })
         }
         .padding({ left: '10%', right: '10%' })
       }

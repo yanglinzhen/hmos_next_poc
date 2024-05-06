@@ -31,6 +31,10 @@
     {
       "name": "background_half_gray",
       "value": "#33000000"
+    },
+    {
+      "name": "background_button_positive",
+      "value": "#ffdb0011"
     }
   ]
 }
