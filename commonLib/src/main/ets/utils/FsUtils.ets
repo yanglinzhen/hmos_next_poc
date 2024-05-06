@@ -1,4 +1,3 @@
-import { Entity } from '../viewmodel/Entity';
 import { ZipFile } from '../viewmodel/ClientpackConfig'
 import fs from '@ohos.file.fs';
 

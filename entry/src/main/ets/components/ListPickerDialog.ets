@@ -37,30 +37,37 @@ export struct ListPickerDialog {
     }) as DialogStruct[]
   }
 
+  @Builder
+  itemView(title: string, onClicked: () => void) {
+    Column() {
+      Text(title)
+        .fontSize('14fp')
+        .fontColor("#99000000")
+    }
+    .height('36vp')
+    .onClick(onClicked)
+  }
+
   build() {
     GridRow({
       columns: {
-        sm: 4,
-        md: 6,
-        lg: 8
+        sm: 8,
+        md: 12,
+        lg: 12
       }
     }) {
       GridCol({
         span: {
-          sm: 4,
-          md: 6,
-          lg: 8
+          sm: 8,
+          md: 12,
+          lg: 12
         },
         offset: 1
       }) {
         Scroll() {
           Column() {
             ForEach(this.mapData(), (item: DialogStruct) => {
-              Column() {
-                Text(item.title)
-                  .fontSize('14fp')
-                  .fontColor("#99000000")
-              }.onClick(() => {
+              this.itemView(item.title, () => {
                 if (this.onSelectItem) {
                   this.onSelectItem(item.url)
                 }
@@ -68,6 +75,7 @@ export struct ListPickerDialog {
               })
             })
           }
+          .alignItems(HorizontalAlign.Start)
         }
       }
     }
