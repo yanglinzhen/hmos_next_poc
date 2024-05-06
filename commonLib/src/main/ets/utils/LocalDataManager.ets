@@ -36,11 +36,11 @@ export class LocalDataManager {
   }
 
   async downloadZipFile(dirPath: string, zipFile: ZipFile) {
+    hilog.info(0x0000, 'LocalDataManager', 'start download %{public}s', zipFile.zipurl)
     const filePath = new FsUtils().createEntityPath(dirPath, zipFile)
     new CdnApi().downloadFile(zipFile.zipurl, filePath, (e: AxiosProgressEvent) => {
-        hilog.info(0x0000, 'LocalDataManager', '%{public}s', JSON.stringify(e))
       }).then((res: AxiosResponse<string>) => {
-        hilog.info(0x0000, 'LocalDataManager', 'download %{public}s finished', zipFile.zipurl)
+        hilog.info(0x0000, 'LocalDataManager', 'finished download %{public}s finished', zipFile.zipurl)
       })
         .catch((err: AxiosError) => {
           hilog.info(0x0000, 'LocalDataManager', '%{public}s', JSON.stringify(err))
@@ -56,6 +56,12 @@ export class LocalDataManager {
       (res.data as ClientpackConfig).zipFiles().map((zipFile: ZipFile) => {
         this.downloadZipFile(dirPath, zipFile)
       })
+        // this.downloadZipFile(dirPath, {
+        //   zipurl: 'https://cdn.hsbcnet.com/uims/cdn/2020116/static-dl/public/mobile/features/cmb_mobile_cp/Production/Global/R78_1_2/cmb-mobile-cbp-lib-background-imgs-prod.zip',
+        //   mapping: 'cmb-mobile-cbp-lib-background-imgs-prod',
+        //   hashcode: '912632f2e780d0b690e933c51bb4531a82c26cf37c95540cc4ba8df7ba44a16e06a61bfac0fec3449aad8e59b134b0787418421c4b4f3cc1f9e71c8092575e5d',
+        //   size: 1295
+        // } as ZipFile)
     })
       .catch((err: AxiosError) => {
         hilog.info(0x0000, 'LocalDataManager', '%{public}s', JSON.stringify(err))

@@ -1,5 +1,5 @@
 import { axios, AxiosInstance, AxiosProgressEvent, AxiosResponse } from '../HttpClientAdapter'
-
+import { getUrlAndAuthHeader, getUrlPath } from './UrlUtils'
 
 export type ChecksumResponse = object
 
@@ -45,15 +45,28 @@ export class CdnApi {
 
   constructor(urlConfig: UrlConfig = new DebugConfig()) {
     this.urlConfig = urlConfig
-    this.axiosCdn = axios.create({
-      baseURL: this.urlConfig.baseUrl,
-      timeout: 30000
-    })
+    const urlAndAuth = getUrlAndAuthHeader(urlConfig.baseUrl)
+
+    if (urlAndAuth.header) {
+      this.axiosCdn = axios.create({
+        baseURL: urlAndAuth.url,
+        timeout: 30000,
+        headers: {
+          'Authorization': urlAndAuth.header
+        }
+      })
+    } else {
+      this.axiosCdn = axios.create({
+        baseURL: this.urlConfig.baseUrl,
+        timeout: 30000,
+      })
+    }
+
   }
 
   getConfig<T>(url: string, transformer: (data: string) => T) {
     return this.axiosCdn.get<string, AxiosResponse<T>, null>(
-      url,
+      getUrlPath(url),
       {
         responseType: 'string',
         transformResponse: transformer,
@@ -62,12 +75,12 @@ export class CdnApi {
 
   downloadFile(url: string, filePath: string, downloadProgress: (progressEvent: AxiosProgressEvent) => void) {
     return this.axiosCdn.get<string, AxiosResponse<string>, null>(
-      url, {
-        headers: { 'Content-Type': 'application/zip' },
-        context: getContext(this),
-        filePath: filePath,
-        onDownloadProgress: downloadProgress
-      })
+      getUrlPath(url), {
+      headers: { 'Content-Type': 'application/zip' },
+      context: getContext(this),
+      filePath: filePath,
+      onDownloadProgress: downloadProgress
+    })
   }
 
   fetchEntityList<T>(transformer: (data: string) => T) {
