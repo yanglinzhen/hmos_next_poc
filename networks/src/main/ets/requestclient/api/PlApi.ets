@@ -1,3 +1,4 @@
+import { SslCertificate } from '../certificates/SSLPinningCertificate'
 import { axios, AxiosError, AxiosInstance, AxiosResponse } from '../HttpClientAdapter'
 
 interface UrlConfig {
@@ -76,7 +77,7 @@ export class PlApi {
         transformResponse: this.loadBalanceResponseTransformer,
         // sslCertificateManager: new SslCertificate(),
         // caPath: 'hsbcnet_cert/www.secure.hsbcnet.com.crt',
-        // context: getContext(this),
+        context: getContext(this),
       })
   }
 }

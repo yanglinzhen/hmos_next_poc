@@ -10,6 +10,8 @@ import { ListPickerDialog, DialogStruct } from '../components/ListPickerDialog'
 import { LocalDataManager } from '@ohos/commonLib/Index';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
+import { LoadingSpinner } from '../view/LoadingSpinner'
+
 @Entry
 @Component
 struct EulaPage {
@@ -34,6 +36,16 @@ struct EulaPage {
     }
   }
 
+  loadAction(action: (() => void) | undefined = undefined, loading: boolean = true) {
+
+    if (!action) {
+      this.isLoading = false
+      return
+    }
+    this.isLoading = loading
+    action()
+  }
+
   build() {
     Stack() {
       Column() {
@@ -52,14 +64,15 @@ struct EulaPage {
             Text('Request')
           }
           .onClick(() => {
-
-            new PlApi().loadBalance()
-              .then((result: AxiosResponse<LoadBalanceResponse>) => {
-                hilog.info(0x0088, 'EulaPage', '%{public}s', JSON.stringify(result.data))
-              })
-              .catch((error: Error) => {
-                hilog.info(0x0088, 'EulaPage', '%{public}s', JSON.stringify(error));
-              })
+            this.loadAction(() => {
+              new PlApi().loadBalance()
+                .then((result: AxiosResponse<LoadBalanceResponse>) => {
+                  this.loadAction()
+                })
+                .catch((error: Error) => {
+                  this.loadAction()
+                })
+            })
           })
           .height('5%')
           .width('100%')
@@ -88,7 +101,7 @@ struct EulaPage {
       .width('100%')
 
       if (this.isLoading)
-        LoadingProgress()
+        LoadingSpinner()
 
     }.width('100%')
     .height('100%')

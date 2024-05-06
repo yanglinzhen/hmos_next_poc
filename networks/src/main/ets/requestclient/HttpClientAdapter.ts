@@ -135,6 +135,7 @@ import fs from '@ohos.file.fs';
 
 const TAG: string = "HttpClientAdapter";
 export const HttpClientAdapter = (config: InternalAxiosRequestConfig) => {
+// axios.defaults.adapter = (config: InternalAxiosRequestConfig) => {
    return new Promise(async (resolve, reject) => {
       if (config.data && config.context
          && config.data instanceof FormData
